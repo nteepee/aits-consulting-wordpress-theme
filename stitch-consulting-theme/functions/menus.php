@@ -1,6 +1,9 @@
 <?php
 /**
- * Menu helper functions and walkers
+ * Menu helper functions and walkers with full WCAG 2.1 AA accessibility
+ *
+ * Provides menu rendering with comprehensive ARIA attributes,
+ * semantic HTML5, and keyboard navigation support.
  *
  * @package Stitch_Consulting_Theme
  */
@@ -72,10 +75,13 @@ function stitch_consulting_get_mobile_menu_location() {
 }
 
 /**
- * Custom menu walker for primary navigation with extra classes.
+ * Custom menu walker for primary navigation with WCAG 2.1 AA accessibility
  *
- * Extends Walker_Nav_Menu to add custom classes for styling
- * and handle active menu item indication.
+ * Extends Walker_Nav_Menu to add:
+ * - ARIA attributes for menu structure
+ * - Proper roles for menu items and submenus
+ * - Active state management
+ * - Semantic HTML structure
  *
  * @see Walker_Nav_Menu
  */
@@ -83,6 +89,9 @@ class Stitch_Consulting_Nav_Walker extends Walker_Nav_Menu {
 
 	/**
 	 * Start element (menu item).
+	 *
+	 * Renders a menu item with proper ARIA attributes and roles
+	 * for keyboard navigation and screen reader support.
 	 *
 	 * @param string   $output Passed by reference. Used to append additional content.
 	 * @param WP_Post  $item Menu item data object.
@@ -101,6 +110,7 @@ class Stitch_Consulting_Nav_Walker extends Walker_Nav_Menu {
 		}
 		$indent = ( $depth ) ? str_repeat( $t, $depth ) : '';
 
+		// Build CSS classes for list item
 		$classes   = empty( $item->classes ) ? array() : (array) $item->classes;
 		$classes[] = 'menu-item-' . $item->ID;
 
@@ -132,8 +142,10 @@ class Stitch_Consulting_Nav_Walker extends Walker_Nav_Menu {
 		$id = apply_filters( 'nav_menu_item_id', 'menu-item-' . $item->ID, $item, $args, $depth );
 		$id = $id ? sprintf( ' id="%s"', esc_attr( $id ) ) : '';
 
-		$output .= $indent . '<li' . $id . $classes . '>';
+		// Add role="none" to list item for ARIA compliance (semantic HTML)
+		$output .= $indent . '<li role="none"' . $id . $classes . '>';
 
+		// Build anchor tag attributes
 		$atts           = array();
 		$atts['title']  = ! empty( $item->attr_title ) ? $item->attr_title : '';
 		$atts['target'] = ! empty( $item->target ) ? $item->target : '';
@@ -150,12 +162,24 @@ class Stitch_Consulting_Nav_Walker extends Walker_Nav_Menu {
 		 */
 		$atts = apply_filters( 'nav_menu_link_attributes', $atts, $item, $args, $depth );
 
+		// Build HTML attribute string
 		$attributes = '';
 		foreach ( $atts as $attr => $value ) {
 			if ( ! empty( $value ) ) {
 				$value       = ( 'href' === $attr ) ? esc_url( $value ) : esc_attr( $value );
 				$attributes .= ' ' . $attr . '="' . $value . '"';
 			}
+		}
+
+		/**
+		 * Add ARIA attributes for menu structure and interaction
+		 */
+		$aria_attrs = ' role="menuitem"';
+
+		// Check if item has children (submenu)
+		if ( in_array( 'menu-item-has-children', (array) $item->classes, true ) ) {
+			// Parent menu items have submenu
+			$aria_attrs .= ' aria-haspopup="menu" aria-expanded="false"';
 		}
 
 		/** This filter is documented in wp-includes/nav-menu-template.php */
@@ -171,30 +195,82 @@ class Stitch_Consulting_Nav_Walker extends Walker_Nav_Menu {
 		 */
 		$title = apply_filters( 'stitch_consulting_nav_menu_item_title', $title, $item, $args, $depth );
 
-		$output .= $indent . '<a' . $attributes . '>';
+		// Render anchor with ARIA attributes
+		$output .= $indent . '<a' . $attributes . $aria_attrs . '>';
 		$output .= $indent . esc_html( $title );
 		$output .= '</a>';
+	}
+
+	/**
+	 * Start submenu (ul/ol) element.
+	 *
+	 * Adds ARIA attributes for submenus including:
+	 * - role="menu" for submenu structure
+	 * - aria-hidden for visibility state
+	 *
+	 * @param string   $output Passed by reference. Used to append additional content.
+	 * @param int      $depth Depth of the submenu. Starts at 0.
+	 * @param stdClass $args An object of wp_nav_menu() arguments.
+	 * @return void
+	 */
+	public function start_lvl( &$output, $depth = 0, $args = null ) {
+		if ( isset( $args->item_spacing ) && 'discard' === $args->item_spacing ) {
+			$t = '';
+			$n = '';
+		} else {
+			$t = "\t";
+			$n = "\n";
+		}
+		$indent = ( $depth ) ? str_repeat( $t, $depth ) : '';
+
+		// Add role="menu" and aria-hidden="true" for submenus
+		// aria-hidden is managed by JavaScript
+		$output .= $n . $indent . '<ul role="menu" aria-hidden="true" style="display:none;">' . $n;
+	}
+
+	/**
+	 * End submenu element.
+	 *
+	 * Closes submenu list with proper formatting.
+	 *
+	 * @param string   $output Passed by reference. Used to append additional content.
+	 * @param int      $depth Depth of the submenu.
+	 * @param stdClass $args An object of wp_nav_menu() arguments.
+	 * @return void
+	 */
+	public function end_lvl( &$output, $depth = 0, $args = null ) {
+		if ( isset( $args->item_spacing ) && 'discard' === $args->item_spacing ) {
+			$t = '';
+			$n = '';
+		} else {
+			$t = "\t";
+			$n = "\n";
+		}
+		$indent = ( $depth ) ? str_repeat( $t, $depth ) : '';
+		$output .= $indent . '</ul>' . $n;
 	}
 }
 
 /**
- * Display primary navigation menu.
+ * Display primary navigation menu with accessibility.
  *
  * Outputs the primary navigation menu with custom walker
- * for enhanced styling capabilities.
+ * for enhanced styling capabilities and ARIA support.
  *
  * @param array $args Optional. Additional arguments for wp_nav_menu().
  * @return void
  */
 function stitch_consulting_primary_menu( $args = array() ) {
 	$defaults = array(
-		'theme_location' => stitch_consulting_get_primary_menu_location(),
-		'menu_class'     => 'primary-navigation',
-		'container'      => 'nav',
+		'theme_location'  => stitch_consulting_get_primary_menu_location(),
+		'menu_class'      => 'primary-navigation',
+		'container'       => 'nav',
 		'container_class' => 'primary-navigation-wrapper',
-		'fallback_cb'    => 'wp_page_menu',
-		'depth'          => 2,
-		'walker'         => new Stitch_Consulting_Nav_Walker(),
+		'container_id'    => 'primary-navigation-wrapper',
+		'fallback_cb'     => 'wp_page_menu',
+		'depth'           => 2,
+		'walker'          => new Stitch_Consulting_Nav_Walker(),
+		'item_spacing'    => 'preserve',
 	);
 
 	$args = wp_parse_args( $args, $defaults );
@@ -203,21 +279,23 @@ function stitch_consulting_primary_menu( $args = array() ) {
 }
 
 /**
- * Display footer menu.
+ * Display footer menu with accessibility.
  *
- * Outputs the footer menu with simplified styling.
+ * Outputs the footer menu with simplified styling and ARIA support.
  *
  * @param array $args Optional. Additional arguments for wp_nav_menu().
  * @return void
  */
 function stitch_consulting_footer_menu( $args = array() ) {
 	$defaults = array(
-		'theme_location' => stitch_consulting_get_footer_menu_location(),
-		'menu_class'     => 'footer-navigation',
-		'container'      => 'nav',
+		'theme_location'  => stitch_consulting_get_footer_menu_location(),
+		'menu_class'      => 'footer-navigation',
+		'container'       => 'nav',
 		'container_class' => 'footer-navigation-wrapper',
-		'fallback_cb'    => 'wp_page_menu',
-		'depth'          => 1,
+		'container_id'    => 'footer-navigation-wrapper',
+		'fallback_cb'     => 'wp_page_menu',
+		'depth'           => 1,
+		'item_spacing'    => 'preserve',
 	);
 
 	$args = wp_parse_args( $args, $defaults );
@@ -226,7 +304,7 @@ function stitch_consulting_footer_menu( $args = array() ) {
 }
 
 /**
- * Get menu item link properties.
+ * Get menu item link properties with proper escaping.
  *
  * @param WP_Post $item Menu item object.
  * @return array Array with 'url' and 'title' keys.
@@ -241,6 +319,8 @@ function stitch_consulting_get_menu_item_link( $item ) {
 /**
  * Check if a menu item is the current page.
  *
+ * Checks if menu item has active state indicators.
+ *
  * @param WP_Post $item Menu item object.
  * @return bool True if item is current page.
  */
@@ -252,3 +332,26 @@ function stitch_consulting_is_menu_item_active( $item ) {
 	return in_array( 'current-menu-item', (array) $item->classes, true ) ||
 		   in_array( 'current-post-parent', (array) $item->classes, true );
 }
+
+/**
+ * Enqueue navigation JavaScript for ARIA state management
+ *
+ * Loads the navigation.js file which handles:
+ * - aria-expanded state updates
+ * - aria-hidden state management
+ * - Keyboard navigation (Escape, Arrow keys)
+ * - Mobile menu toggle
+ * - Screen reader announcements
+ *
+ * @return void
+ */
+function stitch_consulting_enqueue_navigation_js() {
+	wp_enqueue_script(
+		'stitch-consulting-navigation',
+		get_template_directory_uri() . '/assets/js/navigation.js',
+		array(),
+		'1.0.0',
+		true
+	);
+}
+add_action( 'wp_enqueue_scripts', 'stitch_consulting_enqueue_navigation_js' );

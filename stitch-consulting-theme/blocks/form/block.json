@@ -4,9 +4,16 @@
 	"name": "stitch/form",
 	"title": "Form",
 	"category": "design",
-	"description": "Contact form with input fields and validation",
+	"description": "Contact form with input fields, comprehensive validation, and full WCAG 2.1 AA accessibility support",
 	"icon": "feedback",
-	"keywords": ["form", "contact", "input"],
+	"keywords": [
+		"form",
+		"contact",
+		"input",
+		"accessibility",
+		"aria",
+		"validation"
+	],
 	"version": "1.0.0",
 	"supports": {
 		"html": false,
@@ -20,6 +27,10 @@
 	},
 	"textdomain": "stitch",
 	"attributes": {
+		"formLabel": {
+			"type": "string",
+			"default": "Contact Form"
+		},
 		"fields": {
 			"type": "array",
 			"default": [
@@ -28,21 +39,24 @@
 					"type": "text",
 					"label": "Name",
 					"placeholder": "Your name",
-					"required": true
+					"required": true,
+					"errorMessage": "Name is required"
 				},
 				{
 					"id": "email",
 					"type": "email",
 					"label": "Email",
 					"placeholder": "your@email.com",
-					"required": true
+					"required": true,
+					"errorMessage": "Valid email is required"
 				},
 				{
 					"id": "message",
 					"type": "textarea",
 					"label": "Message",
 					"placeholder": "Your message",
-					"required": true
+					"required": true,
+					"errorMessage": "Message is required"
 				}
 			]
 		},

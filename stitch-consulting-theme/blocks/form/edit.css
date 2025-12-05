@@ -13,3 +13,44 @@
 	opacity: 0.6;
 	cursor: not-allowed;
 }
+
+/* Error message visibility in editor */
+.wp-block-stitch-form .error-message {
+	color: #d32f2f;
+	font-size: 0.875rem;
+	margin-top: 0.25rem;
+	min-height: 1.25rem;
+	display: block;
+}
+
+.wp-block-stitch-form .error-message small {
+	font-weight: 500;
+}
+
+/* Invalid input styling */
+.wp-block-stitch-form input:invalid,
+.wp-block-stitch-form textarea:invalid {
+	border-color: #d32f2f !important;
+}
+
+/* Fieldset legend styling */
+.wp-block-stitch-form fieldset {
+	border: none;
+	padding: 0;
+	margin: 0;
+}
+
+.wp-block-stitch-form legend {
+	font-size: 1.125rem;
+	font-weight: 700;
+	color: #FFFFFF;
+	margin-bottom: 16px;
+	width: 100%;
+	padding: 0;
+}
+
+/* Required field indicator */
+.wp-block-stitch-form [aria-label="required"] {
+	color: #EF4444;
+	margin-left: 4px;
+}

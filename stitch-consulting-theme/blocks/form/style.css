@@ -113,8 +113,35 @@
 	margin-left: 4px;
 }
 
+/* Error message styling */
+.wp-block-stitch-form__form .error-message {
+	color: #d32f2f;
+	font-size: 0.875rem;
+	font-weight: 500;
+	margin-top: 0.25rem;
+	min-height: 1.25rem;
+	display: block;
+	line-height: 1.4;
+}
+
 /* Error state */
 .wp-block-stitch-form__form input:invalid,
 .wp-block-stitch-form__form textarea:invalid {
 	border-color: #EF4444;
+}
+
+/* Fieldset and legend styling */
+.wp-block-stitch-form__form fieldset {
+	border: none;
+	padding: 0;
+	margin: 0;
+}
+
+.wp-block-stitch-form__form legend {
+	font-size: 1.125rem;
+	font-weight: 700;
+	color: #FFFFFF;
+	margin-bottom: 16px;
+	width: 100%;
+	padding: 0;
 }

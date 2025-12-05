@@ -7,10 +7,10 @@
 		<div class="wp-block-column" style="margin-bottom:0">
 			<!-- wp:group {"style":{"spacing":{"blockGap":"0.5rem"}},"layout":{"type":"flex","justifyContent":"left"}} -->
 			<div class="wp-block-group" style="gap:0.5rem">
-				<!-- Logo Icon -->
+				<!-- Logo Icon with ARIA -->
 				<!-- wp:html -->
-				<div class="site-logo" style="width:32px;height:32px;color:#195de6;flex-shrink:0">
-					<svg fill="currentColor" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+				<div class="site-logo" style="width:32px;height:32px;color:#195de6;flex-shrink:0" role="img" aria-label="Stitch Consulting Logo">
+					<svg fill="currentColor" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
 						<path clip-rule="evenodd" d="M39.475 21.6262C40.358 21.4363 40.6863 21.5589 40.7581 21.5934C40.7876 21.655 40.8547 21.857 40.8082 22.3336C40.7408 23.0255 40.4502 24.0046 39.8572 25.2301C38.6799 27.6631 36.5085 30.6631 33.5858 33.5858C30.6631 36.5085 27.6632 38.6799 25.2301 39.8572C24.0046 40.4502 23.0255 40.7407 22.3336 40.8082C21.8571 40.8547 21.6551 40.7875 21.5934 40.7581C21.5589 40.6863 21.4363 40.358 21.6262 39.475C21.8562 38.4054 22.4689 36.9657 23.5038 35.2817C24.7575 33.2417 26.5497 30.9744 28.7621 28.762C30.9744 26.5497 33.2417 24.7574 35.2817 23.5037C36.9657 22.4689 38.4054 21.8562 39.475 21.6262ZM4.41189 29.2403L18.7597 43.5881C19.8813 44.7097 21.4027 44.9179 22.7217 44.7893C24.0585 44.659 25.5148 44.1631 26.9723 43.4579C29.9052 42.0387 33.2618 39.5667 36.4142 36.4142C39.5667 33.2618 42.0387 29.9052 43.4579 26.9723C44.1631 25.5148 44.659 24.0585 44.7893 22.7217C44.9179 21.4027 44.7097 19.8813 43.5881 18.7597L29.2403 4.41187C27.8527 3.02428 25.8765 3.02573 24.2861 3.36776C22.6081 3.72863 20.7334 4.58419 18.8396 5.74801C16.4978 7.18716 13.9881 9.18353 11.5858 11.5858C9.18354 13.988 7.18717 16.4978 5.74802 18.8396C4.58421 20.7334 3.72865 22.6081 3.36778 24.2861C3.02574 25.8765 3.02429 27.8527 4.41189 29.2403Z" fill-rule="evenodd"></path>
 					</svg>
 				</div>
@@ -25,25 +25,117 @@
 		<!-- Navigation Column -->
 		<!-- wp:column {"verticalAlignment":"center","layout":{"type":"default"}} -->
 		<div class="wp-block-column is-vertically-aligned-center">
-			<!-- Desktop Navigation -->
+			<!-- Primary Navigation with Full ARIA Support -->
 			<!-- wp:navigation {"ref":0,"overlayMenu":"always","style":{"typography":{"fontStyle":"normal","fontWeight":"500","fontSize":"0.875rem"}},"layout":{"type":"flex","justifyContent":"right","flexWrap":"nowrap","orientation":"horizontal"}} -->
-			<!-- wp:navigation-link {"label":"Home","url":"/"} /-->
-			<!-- wp:navigation-link {"label":"Solutions","url":"/solutions"} -->
-			<!-- wp:navigation-submenu -->
-			<!-- wp:navigation-link {"label":"Passenger Monitoring Systems","url":"/solutions/passenger-monitoring"} /-->
-			<!-- wp:navigation-link {"label":"Fleet Safe Pro","url":"/solutions/fleet-safe-pro"} /-->
-			<!-- /wp:navigation-submenu -->
-			<!-- /wp:navigation-link -->
-			<!-- wp:navigation-link {"label":"Case Studies","url":"/case-studies"} /-->
-			<!-- wp:navigation-link {"label":"Blog","url":"/blog"} /-->
-			<!-- wp:navigation-link {"label":"About","url":"/about"} /-->
-			<!-- wp:navigation-link {"label":"Contact","url":"/contact"} /-->
+			<nav
+				role="navigation"
+				aria-label="Primary Navigation"
+				class="wp-block-navigation primary-navigation-wrapper"
+				id="primary-navigation-wrapper"
+			>
+				<!-- Mobile Menu Toggle Button with Full ARIA -->
+				<button
+					type="button"
+					id="primary-menu-toggle"
+					class="wp-block-navigation__responsive-container-open menu-toggle"
+					aria-label="Toggle primary navigation menu"
+					aria-expanded="false"
+					aria-controls="primary-menu"
+					aria-haspopup="menu"
+				>
+					<span class="wp-block-navigation__responsive-container-open-label">Menu</span>
+				</button>
+
+				<!-- Primary Menu with Semantic ARIA Attributes -->
+				<ul
+					role="menubar"
+					aria-orientation="horizontal"
+					id="primary-menu"
+					class="primary-navigation"
+					aria-hidden="true"
+					style="display:none;position:absolute;flex-direction:column;background-color:#0A0A0A;border:1px solid #262626;border-radius:8px;padding:0;list-style:none;min-width:200px;z-index:1000;"
+				>
+					<!-- Home Link -->
+					<!-- wp:navigation-link {"label":"Home","url":"/"} /-->
+					<li role="none">
+						<a href="/" role="menuitem" class="primary-navigation-item">
+							Home
+						</a>
+					</li>
+
+					<!-- Solutions with Submenu -->
+					<!-- wp:navigation-link {"label":"Solutions","url":"/solutions"} -->
+					<!-- wp:navigation-submenu -->
+					<li role="none">
+						<a href="/solutions" role="menuitem" aria-haspopup="menu" aria-expanded="false" aria-controls="solutions-submenu" class="primary-navigation-item">
+							Solutions
+						</a>
+						<ul
+							role="menu"
+							aria-hidden="true"
+							id="solutions-submenu"
+							style="display:none;position:absolute;top:100%;left:0;flex-direction:column;background-color:#141414;border:1px solid #262626;border-radius:8px;padding:0;list-style:none;min-width:250px;margin-top:4px;"
+						>
+							<!-- wp:navigation-link {"label":"Passenger Monitoring Systems","url":"/solutions/passenger-monitoring"} /-->
+							<li role="none">
+								<a href="/solutions/passenger-monitoring" role="menuitem" class="primary-navigation-item">
+									Passenger Monitoring Systems
+								</a>
+							</li>
+
+							<!-- wp:navigation-link {"label":"Fleet Safe Pro","url":"/solutions/fleet-safe-pro"} /-->
+							<li role="none">
+								<a href="/solutions/fleet-safe-pro" role="menuitem" class="primary-navigation-item">
+									Fleet Safe Pro
+								</a>
+							</li>
+						</ul>
+					</li>
+					<!-- /wp:navigation-submenu -->
+					<!-- /wp:navigation-link -->
+
+					<!-- Case Studies Link -->
+					<!-- wp:navigation-link {"label":"Case Studies","url":"/case-studies"} /-->
+					<li role="none">
+						<a href="/case-studies" role="menuitem" class="primary-navigation-item">
+							Case Studies
+						</a>
+					</li>
+
+					<!-- Blog Link -->
+					<!-- wp:navigation-link {"label":"Blog","url":"/blog"} /-->
+					<li role="none">
+						<a href="/blog" role="menuitem" class="primary-navigation-item">
+							Blog
+						</a>
+					</li>
+
+					<!-- About Link -->
+					<!-- wp:navigation-link {"label":"About","url":"/about"} /-->
+					<li role="none">
+						<a href="/about" role="menuitem" class="primary-navigation-item">
+							About
+						</a>
+					</li>
+
+					<!-- Contact Link -->
+					<!-- wp:navigation-link {"label":"Contact","url":"/contact"} /-->
+					<li role="none">
+						<a href="/contact" role="menuitem" class="primary-navigation-item">
+							Contact
+						</a>
+					</li>
+				</ul>
+			</nav>
 			<!-- /wp:navigation -->
 
 			<!-- CTA Button -->
 			<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"right"}} -->
 			<div class="wp-block-buttons">
 				<!-- wp:button {"text":"Request Demo","url":"/contact","className":"is-style-fill"} /-->
+				<a href="/contact" class="wp-block-button__link wp-element-button is-style-fill" role="button">
+					Request Demo
+				</a>
 			</div>
 			<!-- /wp:buttons -->
 		</div>
