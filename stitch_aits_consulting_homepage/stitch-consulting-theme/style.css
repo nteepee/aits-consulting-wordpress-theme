@@ -432,7 +432,339 @@ hr {
 	}
 }
 
-/* Responsive typography */
+/* ===== RESPONSIVE BREAKPOINTS ===== */
+
+/* Mobile First: Base styles apply to all devices */
+
+/* Small devices (640px and up) */
+@media (min-width: 640px) {
+	html {
+		font-size: 16px;
+	}
+
+	body {
+		font-size: var(--stitch-font-size-base);
+	}
+
+	h1 {
+		font-size: 2rem;
+	}
+
+	h2 {
+		font-size: 1.75rem;
+	}
+}
+
+/* Tablets (768px and up) */
+@media (min-width: 768px) {
+	body {
+		font-size: var(--stitch-font-size-base);
+	}
+
+	h1 {
+		font-size: 2.5rem;
+	}
+
+	h2 {
+		font-size: 2rem;
+	}
+
+	h3 {
+		font-size: var(--stitch-font-size-2xl);
+	}
+
+	/* Improve table readability on tablets */
+	table {
+		font-size: var(--stitch-font-size-sm);
+	}
+
+	th, td {
+		padding: var(--stitch-spacing-md);
+	}
+}
+
+/* Desktop (1024px and up) */
+@media (min-width: 1024px) {
+	h1 {
+		font-size: var(--stitch-font-size-5xl);
+	}
+
+	h2 {
+		font-size: var(--stitch-font-size-4xl);
+	}
+
+	h3 {
+		font-size: var(--stitch-font-size-2xl);
+	}
+
+	/* Optimize spacing on desktop */
+	h1, h2, h3, h4, h5, h6 {
+		margin-bottom: var(--stitch-spacing-lg);
+	}
+
+	p {
+		margin-bottom: var(--stitch-spacing-md);
+	}
+}
+
+/* Large desktop (1280px and up) */
+@media (min-width: 1280px) {
+	h1 {
+		font-size: 3.5rem;
+	}
+
+	h2 {
+		font-size: 3rem;
+	}
+
+	/* Wider content margins */
+	article {
+		max-width: 900px;
+	}
+}
+
+/* Extra large (1536px and up) */
+@media (min-width: 1536px) {
+	html {
+		font-size: 18px;
+	}
+
+	h1 {
+		font-size: 3.75rem;
+	}
+}
+
+/* Mobile devices (max-width: 639px) - Mobile first */
+@media (max-width: 639px) {
+	html {
+		font-size: 14px;
+	}
+
+	body {
+		font-size: 0.9375rem;
+		line-height: 1.5;
+	}
+
+	h1 {
+		font-size: 1.5rem;
+		line-height: 1.3;
+		margin-bottom: var(--stitch-spacing-md);
+	}
+
+	h2 {
+		font-size: 1.25rem;
+		margin-bottom: var(--stitch-spacing-md);
+	}
+
+	h3 {
+		font-size: 1.125rem;
+	}
+
+	h4, h5, h6 {
+		font-size: 1rem;
+	}
+
+	p {
+		margin-bottom: var(--stitch-spacing-sm);
+		line-height: 1.6;
+	}
+
+	/* Improve form usability on mobile */
+	input[type="text"],
+	input[type="email"],
+	input[type="password"],
+	input[type="url"],
+	input[type="number"],
+	input[type="tel"],
+	textarea,
+	select {
+		font-size: 16px; /* Prevent auto-zoom on iOS */
+		padding: 0.75rem var(--stitch-spacing-base);
+		min-height: 44px; /* Touch target size */
+	}
+
+	label {
+		font-size: 0.9375rem;
+		margin-bottom: var(--stitch-spacing-sm);
+	}
+
+	/* Touch-friendly buttons */
+	button,
+	.wp-block-button__link {
+		min-height: 48px; /* Minimum touch target size */
+		min-width: 48px;
+		padding: 0.75rem var(--stitch-spacing-base);
+		font-size: 1rem;
+	}
+
+	/* Improve spacing for mobile */
+	ul, ol {
+		padding-left: var(--stitch-spacing-md);
+		margin-bottom: var(--stitch-spacing-md);
+	}
+
+	li {
+		margin-bottom: var(--stitch-spacing-xs);
+	}
+
+	/* Tables scroll on mobile */
+	table {
+		font-size: 0.875rem;
+		display: block;
+		overflow-x: auto;
+		white-space: nowrap;
+		-webkit-overflow-scrolling: touch;
+	}
+
+	th, td {
+		padding: var(--stitch-spacing-sm) var(--stitch-spacing-xs);
+	}
+
+	/* Reduce margins on mobile */
+	figure {
+		margin: var(--stitch-spacing-md) 0;
+	}
+
+	figcaption {
+		font-size: 0.8125rem;
+	}
+
+	blockquote {
+		padding-left: var(--stitch-spacing-md);
+		font-size: 0.9375rem;
+	}
+
+	hr {
+		margin: var(--stitch-spacing-lg) 0;
+	}
+
+	/* Readable line length on mobile */
+	article {
+		font-size: 0.9375rem;
+		line-height: 1.7;
+		max-width: 100%;
+		overflow-x: hidden;
+	}
+
+	/* Social share buttons stack on mobile */
+	a[aria-label*="Share"] {
+		width: 2.25rem;
+		height: 2.25rem;
+		font-size: 0.75rem;
+	}
+
+	/* Optimize card spacing */
+	.related-post-card,
+	.product-card,
+	.case-study-card {
+		margin-bottom: var(--stitch-spacing-md);
+		padding: var(--stitch-spacing-sm);
+	}
+
+	.related-post-card img,
+	.product-card img,
+	.case-study-card img {
+		height: 150px;
+	}
+
+	/* Query pagination on mobile */
+	.wp-block-query-pagination {
+		flex-wrap: wrap;
+		gap: var(--stitch-spacing-sm);
+	}
+
+	.wp-block-query-pagination a,
+	.wp-block-query-pagination button {
+		padding: var(--stitch-spacing-xs) var(--stitch-spacing-sm);
+		font-size: 0.875rem;
+	}
+
+	/* Comments section on mobile */
+	.wp-block-comments {
+		margin-top: var(--stitch-spacing-lg);
+		padding-top: var(--stitch-spacing-lg);
+	}
+
+	.wp-block-comments h2 {
+		font-size: 1.5rem;
+	}
+
+	/* Main content padding on mobile */
+	main {
+		padding-left: var(--stitch-spacing-base);
+		padding-right: var(--stitch-spacing-base);
+	}
+
+	/* Breadcrumbs on mobile */
+	nav.breadcrumbs {
+		font-size: 0.8125rem;
+	}
+
+	nav.breadcrumbs ol {
+		gap: var(--stitch-spacing-2xs);
+	}
+}
+
+/* Small tablets (640px - 767px) */
+@media (min-width: 640px) and (max-width: 767px) {
+	h1 {
+		font-size: 1.75rem;
+	}
+
+	h2 {
+		font-size: 1.5rem;
+	}
+
+	h3 {
+		font-size: 1.25rem;
+	}
+
+	input[type="text"],
+	input[type="email"],
+	input[type="password"],
+	input[type="url"],
+	input[type="number"],
+	input[type="tel"],
+	textarea,
+	select {
+		font-size: 16px;
+		min-height: 44px;
+	}
+
+	button,
+	.wp-block-button__link {
+		min-height: 44px;
+	}
+
+	/* Optimize card grid for tablet */
+	.stitch-feature-cards,
+	.stitch-stats,
+	.related-posts-grid {
+		grid-template-columns: repeat(2, 1fr);
+		gap: var(--stitch-spacing-md);
+	}
+
+	.related-post-card img,
+	.product-card img,
+	.case-study-card img {
+		height: 180px;
+	}
+}
+
+/* Medium tablets (768px - 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+	/* Optimize for iPad landscape */
+	.stitch-feature-cards,
+	.stitch-stats {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.related-posts-grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+/* Responsive typography (legacy media queries) */
 @media (max-width: 768px) {
 	h1 {
 		font-size: var(--stitch-font-size-3xl);
