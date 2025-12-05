@@ -1,0 +1,64 @@
+<!-- wp:template-part {"slug":"header","theme":"stitch-consulting-theme","area":"header"} /-->
+
+<!-- wp:group {"tagName":"main","layout":{"type":"constrained"},"style":{"spacing":{"blockGap":"2rem","padding":{"top":"2rem","right":"1rem","bottom":"2rem","left":"1rem"}},"color":{"background":"var(--wp--preset--color--bg-light)"}}} -->
+<main class="wp-block-group">
+	<!-- wp:group {"layout":{"type":"constrained"},"style":{"spacing":{"blockGap":"2rem"}}} -->
+	<div class="wp-block-group">
+		<!-- Archive Header -->
+		<!-- wp:group {"layout":{"type":"constrained"},"style":{"spacing":{"blockGap":"1rem","margin":{"bottom":"1.5rem"}}}} -->
+		<div class="wp-block-group">
+			<!-- wp:heading {"level":1,"style":{"typography":{"fontSize":"2.25rem"},"color":{"text":"#0e121b"}}} -->
+			<h1 style="color: #0e121b; font-size: 2.25rem;">Our Solutions</h1>
+			<!-- /wp:heading -->
+
+			<!-- wp:paragraph {"style":{"color":{"text":"#666666"}}} -->
+			<p style="color: #666666;">Comprehensive fleet safety and management solutions designed for modern operations.</p>
+			<!-- /wp:paragraph -->
+		</div>
+		<!-- /wp:group -->
+
+		<!-- Products/Solutions Grid -->
+		<!-- wp:query {"queryId":0,"query":{"perPage":12,"pages":0,"offset":0,"postType":"product","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"exclude","inherit":false},"displayLayout":{"type":"grid","columns":3},"align":"wide"} -->
+		<div class="wp-block-query">
+			<!-- wp:post-template -->
+			<!-- wp:group {"layout":{"type":"constrained"},"className":"product-card"} -->
+			<div class="wp-block-group product-card">
+				<!-- wp:post-featured-image {"isLink":true,"style":{"border":{"radius":"0.75rem"},"spacing":{"margin":{"bottom":"1rem"}}},"width":"100%","height":"250px"} /-->
+
+				<!-- wp:post-title {"isLink":true,"fontSize":"lg","style":{"spacing":{"margin":{"bottom":"0.5rem"}}}} /-->
+
+				<!-- wp:post-excerpt {"moreText":"Learn More","style":{"spacing":{"margin":{"bottom":"1rem"}}}} /-->
+
+				<!-- wp:group {"layout":{"type":"flex","justifyContent":"flex-start"},"style":{"spacing":{"blockGap":"0.75rem"}}} -->
+				<div class="wp-block-group" style="display: flex; justify-content: flex-start; gap: 0.75rem;">
+					<!-- wp:button {"style":{"color":{"background":"var(--wp--preset--color--primary)","text":"#ffffff"}}} -->
+					<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" style="background-color: var(--wp--preset--color--primary); color: #ffffff;">View Details</a></div>
+					<!-- /wp:button -->
+				</div>
+				<!-- /wp:group -->
+			</div>
+			<!-- /wp:group -->
+			<!-- /wp:post-template -->
+
+			<!-- wp:query-no-results -->
+			<!-- wp:paragraph -->
+			<p>No products found.</p>
+			<!-- /wp:paragraph -->
+			<!-- /wp:query-no-results -->
+		</div>
+		<!-- /wp:query -->
+
+		<!-- Pagination -->
+		<!-- wp:query-pagination {"layout":{"type":"flex","justifyContent":"center"},"style":{"spacing":{"blockGap":"0.5rem"}}} -->
+		<div class="wp-block-query-pagination" style="display: flex; justify-content: center; gap: 0.5rem;">
+			<!-- wp:query-pagination-previous /-->
+			<!-- wp:query-pagination-numbers /-->
+			<!-- wp:query-pagination-next /-->
+		</div>
+		<!-- /wp:query-pagination -->
+	</div>
+	<!-- /wp:group -->
+</main>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"footer","theme":"stitch-consulting-theme","area":"footer"} /-->

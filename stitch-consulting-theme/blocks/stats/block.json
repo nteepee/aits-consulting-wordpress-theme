@@ -1,0 +1,59 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "stitch/stats",
+	"title": "Stats",
+	"category": "design",
+	"description": "Display key metrics and statistics in a grid",
+	"icon": "chart-bar",
+	"keywords": ["stats", "metrics", "numbers"],
+	"version": "1.0.0",
+	"supports": {
+		"html": false,
+		"color": {
+			"background": true,
+			"text": true
+		},
+		"spacing": {
+			"padding": true
+		}
+	},
+	"textdomain": "stitch",
+	"attributes": {
+		"stats": {
+			"type": "array",
+			"default": [
+				{
+					"id": "stat-1",
+					"value": "1000+",
+					"label": "Happy Clients",
+					"icon": "people"
+				},
+				{
+					"id": "stat-2",
+					"value": "500M+",
+					"label": "Data Points Processed",
+					"icon": "storage"
+				},
+				{
+					"id": "stat-3",
+					"value": "99.9%",
+					"label": "Uptime",
+					"icon": "shield_check"
+				}
+			]
+		},
+		"columns": {
+			"type": "number",
+			"default": 3
+		},
+		"gap": {
+			"type": "string",
+			"default": "24px"
+		}
+	},
+	"editorScript": "file:./edit.js",
+	"editorStyle": "file:./edit.css",
+	"style": "file:./style.css",
+	"render": "file:./render.php"
+}

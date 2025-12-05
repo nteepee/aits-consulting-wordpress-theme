@@ -1,0 +1,15 @@
+/* Form Block Editor Styles */
+.wp-block-stitch-form {
+	border-radius: 12px;
+	overflow: hidden;
+}
+
+.wp-block-stitch-form.is-selected {
+	box-shadow: 0 0 0 3px rgba(25, 93, 230, 0.2);
+}
+
+.wp-block-stitch-form input,
+.wp-block-stitch-form textarea {
+	opacity: 0.6;
+	cursor: not-allowed;
+}

@@ -1,0 +1,59 @@
+<!-- wp:template-part {"slug":"header","theme":"stitch-consulting-theme","area":"header"} /-->
+
+<!-- wp:group {"tagName":"main","layout":{"type":"constrained"},"style":{"spacing":{"blockGap":"2rem","padding":{"top":"2rem","right":"1rem","bottom":"2rem","left":"1rem"}},"color":{"background":"var(--wp--preset--color--bg-light)"}}} -->
+<main class="wp-block-group">
+	<!-- wp:group {"layout":{"type":"constrained"},"style":{"spacing":{"blockGap":"1.5rem"}}} -->
+	<div class="wp-block-group">
+		<!-- Breadcrumbs -->
+		<!-- wp:group {"layout":{"type":"flex","flexWrap":"wrap"},"style":{"spacing":{"blockGap":"0.5rem"}}} -->
+		<div class="wp-block-group">
+			<!-- wp:paragraph {"style":{"typography":{"fontSize":"0.875rem"},"color":{"text":"#a3a3a3"}},"className":"breadcrumbs"} -->
+			<p class="breadcrumbs" style="color: #a3a3a3; font-size: 0.875rem;"><a href="/" style="color: #a3a3a3;">Home</a> / <span style="color: #111621;"><!-- wp:post-title /--></span></p>
+			<!-- /wp:paragraph -->
+		</div>
+		<!-- /wp:group -->
+
+		<!-- Post Title -->
+		<!-- wp:heading {"level":1,"style":{"typography":{"fontSize":"2.25rem"},"color":{"text":"#0e121b"}}} -->
+		<h1 style="color: #0e121b; font-size: 2.25rem;"><!-- wp:post-title /--></h1>
+		<!-- /wp:heading -->
+
+		<!-- Post Meta Information -->
+		<!-- wp:group {"layout":{"type":"flex","flexWrap":"wrap"},"style":{"spacing":{"blockGap":"1rem"}}} -->
+		<div class="wp-block-group" style="display: flex; flex-wrap: wrap; gap: 1rem;">
+			<!-- wp:post-author-name {"style":{"typography":{"fontSize":"0.875rem"},"color":{"text":"#a3a3a3"}}} /-->
+			<!-- wp:post-date {"style":{"typography":{"fontSize":"0.875rem"},"color":{"text":"#a3a3a3"}}} /-->
+		</div>
+		<!-- /wp:group -->
+
+		<!-- Featured Image -->
+		<!-- wp:post-featured-image {"isLink":false,"style":{"spacing":{"margin":{"top":"1.5rem","bottom":"1.5rem"}},"border":{"radius":"0.75rem"}}} /-->
+
+		<!-- Post Content -->
+		<!-- wp:post-content {"layout":{"type":"constrained"}} /-->
+
+		<!-- Post Categories/Terms -->
+		<!-- wp:group {"layout":{"type":"flex","flexWrap":"wrap"},"style":{"spacing":{"blockGap":"0.5rem","margin":{"top":"2rem"}}}} -->
+		<div class="wp-block-group" style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 2rem;">
+			<!-- wp:post-terms {"term":"category","style":{"typography":{"fontSize":"0.875rem"}},"separator":","} /-->
+		</div>
+		<!-- /wp:group -->
+
+		<!-- Divider -->
+		<!-- wp:separator {"style":{"color":{"background":"#e7ebf3"},"spacing":{"margin":{"top":"2rem","bottom":"2rem"}}},"className":"is-style-default"} -->
+		<hr class="wp-block-separator has-text-color has-background is-style-default" style="background-color: #e7ebf3; border-radius: 0; margin-top: 2rem; margin-bottom: 2rem;"/>
+		<!-- /wp:separator -->
+
+		<!-- Navigation -->
+		<!-- wp:query-pagination {"layout":{"type":"flex","justifyContent":"space-between"}} -->
+		<div class="wp-block-query-pagination">
+			<!-- wp:query-pagination-previous {"label":"Previous"} /-->
+			<!-- wp:query-pagination-next {"label":"Next"} /-->
+		</div>
+		<!-- /wp:query-pagination -->
+	</div>
+	<!-- /wp:group -->
+</main>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"footer","theme":"stitch-consulting-theme","area":"footer"} /-->

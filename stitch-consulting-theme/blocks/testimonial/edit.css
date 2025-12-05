@@ -1,0 +1,17 @@
+/* Testimonial Block Editor Styles */
+.wp-block-stitch-testimonial {
+	border-radius: 12px;
+	overflow: hidden;
+}
+
+.wp-block-stitch-testimonial.is-selected {
+	box-shadow: 0 0 0 3px rgba(25, 93, 230, 0.2);
+}
+
+.wp-block-stitch-testimonial blockquote {
+	margin: 0;
+}
+
+.wp-block-stitch-testimonial p {
+	margin: 0;
+}

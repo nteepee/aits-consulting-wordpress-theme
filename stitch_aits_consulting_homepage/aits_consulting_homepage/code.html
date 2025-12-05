@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AITS Consulting Homepage Redesign</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, #3D8BFF 0%, #AB23FF 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+        }
+        .hover-lift {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .hover-lift:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+    </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#195de6",
+              "background-light": "#f6f6f8",
+              "background-dark": "#0A0A0A",
+              "surface-dark": "#141414",
+              "border-dark": "#262626",
+              "text-muted": "#A3A3A3",
+            },
+            fontFamily: {
+              "display": ["Inter", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.5rem", "lg": "0.75rem", "xl": "1rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+</head>
+<body class="font-display bg-background-dark text-white">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<header class="fixed top-0 left-0 right-0 z-50 bg-background-dark/80 backdrop-blur-lg border-b border-border-dark">
+<div class="mx-auto flex max-w-7xl items-center justify-between whitespace-nowrap px-6 py-4">
+<div class="flex items-center gap-4">
+<div class="size-8 text-primary">
+<svg fill="currentColor" viewBox="0 0 48 48" xmlns="http://www.w.org/2000/svg">
+<path clip-rule="evenodd" d="M39.475 21.6262C40.358 21.4363 40.6863 21.5589 40.7581 21.5934C40.7876 21.655 40.8547 21.857 40.8082 22.3336C40.7408 23.0255 40.4502 24.0046 39.8572 25.2301C38.6799 27.6631 36.5085 30.6631 33.5858 33.5858C30.6631 36.5085 27.6632 38.6799 25.2301 39.8572C24.0046 40.4502 23.0255 40.7407 22.3336 40.8082C21.8571 40.8547 21.6551 40.7875 21.5934 40.7581C21.5589 40.6863 21.4363 40.358 21.6262 39.475C21.8562 38.4054 22.4689 36.9657 23.5038 35.2817C24.7575 33.2417 26.5497 30.9744 28.7621 28.762C30.9744 26.5497 33.2417 24.7574 35.2817 23.5037C36.9657 22.4689 38.4054 21.8562 39.475 21.6262ZM4.41189 29.2403L18.7597 43.5881C19.8813 44.7097 21.4027 44.9179 22.7217 44.7893C24.0585 44.659 25.5148 44.1631 26.9723 43.4579C29.9052 42.0387 33.2618 39.5667 36.4142 36.4142C39.5667 33.2618 42.0387 29.9052 43.4579 26.9723C44.1631 25.5148 44.659 24.0585 44.7893 22.7217C44.9179 21.4027 44.7097 19.8813 43.5881 18.7597L29.2403 4.41187C27.8527 3.02428 25.8765 3.02573 24.2861 3.36776C22.6081 3.72863 20.7334 4.58419 18.8396 5.74801C16.4978 7.18716 13.9881 9.18353 11.5858 11.5858C9.18354 13.988 7.18717 16.4978 5.74802 18.8396C4.58421 20.7334 3.72865 22.6081 3.36778 24.2861C3.02574 25.8765 3.02429 27.8527 4.41189 29.2403Z" fill-rule="evenodd"></path>
+</svg>
+</div>
+<h2 class="text-white text-xl font-bold">AITS Consulting</h2>
+</div>
+<nav class="hidden md:flex flex-1 justify-center items-center gap-8">
+<a class="text-text-muted text-sm font-medium hover:text-white transition-colors" href="#">Solutions</a>
+<a class="text-text-muted text-sm font-medium hover:text-white transition-colors" href="#">Case Studies</a>
+<a class="text-text-muted text-sm font-medium hover:text-white transition-colors" href="#">Blog</a>
+<a class="text-text-muted text-sm font-medium hover:text-white transition-colors" href="#">About Us</a>
+</nav>
+<div class="hidden md:flex items-center gap-4">
+<a class="text-white text-sm font-medium hover:text-primary transition-colors" href="#">Contact</a>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-md h-9 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:opacity-90 transition-opacity">
+<span class="truncate">Request a Demo</span>
+</button>
+</div>
+<button class="md:hidden text-white">
+<span class="material-symbols-outlined !text-3xl">menu</span>
+</button>
+</div></header>
+<main>
+<section class="relative h-[80vh] min-h-[600px] w-full flex items-center justify-center overflow-hidden pt-20">
+<div class="absolute inset-0 z-0">
+<img alt="Abstract image of data streams and connected nodes" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUEltp4p7Izfv8XjC2cUMhMvdIqJgt4xQ24N3zQjxRlctBR6QEYethNFCycFBEnMalBC6YlNdejB9maDGgeoK1f4uQDZG8XZPPFQzyVlKuLR85RIXTRHEbBBXTrcetusWvpr-HoeSEMOoIJ9jF4FjE4roed5igL1uD-raZStGgt8ZnWtZPab8_JneyG7lvkkDkOYe4TCWIw0y11sjlMRzAp3hqXBQYFvfqQDsjVTSCvU8caXa5bXkIKfLmbusZsQf5F55w8kn7yTw"/>
+<div class="absolute inset-0 bg-black/70 backdrop-blur-sm"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark via-background-dark/50 to-transparent"></div>
+</div>
+<div class="relative z-10 mx-auto max-w-5xl text-center px-6">
+<h1 class="text-4xl md:text-6xl font-extrabold tracking-tighter leading-tight">
+<span class="gradient-text">Revolutionizing Fleet Safety</span> Through Data Intelligence
+</h1>
+<p class="mt-6 text-lg md:text-xl text-text-muted max-w-3xl mx-auto">
+                Harnessing the power of predictive analytics to create safer roads and more efficient fleets for tomorrow's logistics leaders.
+            </p>
+<div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+<button class="w-full sm:w-auto flex items-center justify-center rounded-md h-12 px-6 bg-primary text-white text-base font-bold hover:opacity-90 transition-opacity">
+<span>Explore Our Solutions</span>
+</button>
+<button class="w-full sm:w-auto flex items-center justify-center rounded-md h-12 px-6 bg-surface-dark text-white text-base font-bold border border-border-dark hover:bg-border-dark transition-colors">
+<span>Learn More</span>
+<span class="material-symbols-outlined ml-2">arrow_forward</span>
+</button>
+</div>
+</div>
+</section>
+<section class="py-20 md:py-32">
+<div class="mx-auto max-w-7xl px-6">
+<div class="text-center max-w-3xl mx-auto">
+<h2 class="text-3xl md:text-4xl font-bold tracking-tight">A Complete Fleet Safety Platform</h2>
+<p class="mt-4 text-lg text-text-muted">From predictive risk modeling to real-time driver coaching, our solutions are designed to provide a comprehensive safety net for your entire operation.</p>
+</div>
+<div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="flex flex-col gap-4 rounded-xl border border-border-dark bg-surface-dark p-8 hover-lift">
+<div class="text-primary">
+<span class="material-symbols-outlined !text-4xl">query_stats</span>
+</div>
+<div class="flex flex-col gap-2">
+<h3 class="text-white text-xl font-bold">Predictive Analytics</h3>
+<p class="text-text-muted text-base">Anticipate and mitigate risks before they happen with our advanced AI-driven predictive models.</p>
+</div>
+</div>
+<div class="flex flex-col gap-4 rounded-xl border border-border-dark bg-surface-dark p-8 hover-lift">
+<div class="text-primary">
+<span class="material-symbols-outlined !text-4xl">videocam</span>
+</div>
+<div class="flex flex-col gap-2">
+<h3 class="text-white text-xl font-bold">Driver Monitoring</h3>
+<p class="text-text-muted text-base">Gain real-time insights into driver behavior to encourage safer habits and reduce incidents.</p>
+</div>
+</div>
+<div class="flex flex-col gap-4 rounded-xl border border-border-dark bg-surface-dark p-8 hover-lift">
+<div class="text-primary">
+<span class="material-symbols-outlined !text-4xl">assignment_turned_in</span>
+</div>
+<div class="flex flex-col gap-2">
+<h3 class="text-white text-xl font-bold">Compliance Management</h3>
+<p class="text-text-muted text-base">Streamline regulatory adherence and ensure your fleet operates within all legal frameworks effortlessly.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-20 md:py-32 bg-surface-dark">
+<div class="mx-auto max-w-7xl px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div class="flex flex-col justify-center gap-6">
+<span class="text-primary text-sm font-bold uppercase tracking-wider">Featured Case Study</span>
+<p class="text-white text-3xl md:text-4xl font-bold leading-snug">"AITS Consulting's platform led to a 40% reduction in preventable accidents within the first six months."</p>
+<div>
+<p class="text-white font-semibold">Jane Doe, COO</p>
+<p class="text-text-muted">Global Logistics Inc.</p>
+</div>
+<a class="text-primary font-bold text-sm flex items-center gap-2 group w-fit" href="#">
+                    Read the full story
+                    <span class="material-symbols-outlined transition-transform group-hover:translate-x-1">arrow_forward</span>
+</a>
+</div>
+<div class="min-h-[300px] lg:min-h-[500px] rounded-xl overflow-hidden">
+<img alt="A modern logistics warehouse with workers managing packages." class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuADmJx4HC3K_jwcWGo__lUla8UGOkgE1-LX-tZqD_Jo3XcYuy7agFXOcJSU5wJrWvhyVYnH4K3wO6uz4Ozbwv9iYe9LK_9YLyOydwuf8GWD2_IP74epNvfXxnzJMdQnURNgPP2pY0LpyBgn06eTPkxRVS5wGtiFFOxsx1oAUZVe6c-Xk_WcaA1CNsFuuaaoAMeRi26fTkAuPpIYZJ_c-Hi6QFIJcXIahPG7X_VPGTGagMbbielDN1TP0JSiUXSg9ePQHzgU2VPGUoc"/>
+</div>
+</div>
+</section>
+<section class="py-20 md:py-32">
+<div class="mx-auto max-w-7xl px-6">
+<h3 class="text-center text-lg font-semibold text-text-muted">Trusted By The World's Most Innovative Fleets</h3>
+<div class="mt-12 flex justify-center items-center gap-12 md:gap-16 flex-wrap">
+<img alt="Client logo 1" class="h-8 grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition-all" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPDf3BqriXLZ-uiR9GueQMtqUahb439QkeJDNHJUiWA13fD2CyhwKApwJR_1lkbZUgIJaCK1x7WLdY5ds1exHfOnG3FE_oe8QhhZOnSwk9EmLWTGMo88aB-PRipkV2YYQ-Rw8kse15CwFowOpMDs939lVpuizqkwXp_QLn7U-yOePOijsGp6mD5M6Zfqb0SIoH6umeGdSGOFhAPjkEgNHBEpDy6vOj3sMEjynRn2dzUvPDUr8qJjj28ri3IES3MXD9BCmi7fO7yrQ"/>
+<img alt="Client logo 2" class="h-8 grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition-all" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKyJeLwXPGALM9FqsO6gl3DkWOy0G42DohzpRJOP4DXwpeuZkIYypaNKFVesdYu00PfO_wPjyKfEm_NTI9WDQLHiUZow2AI-VEZQPX3ra4MOxtQIZAMBjgHbGlefkTQraXRlXyAz-awbcY4cvC-yUy7X734ax5gu6-ucqBjtLb1iZhfx1OCDuX87QTLofaJlcgLQA3968pOIzNi3tWXZNrUQreqkVRnH709Szp4RHby6ypS3N2mnpeUZgLITwgg9RBMt1dIQ4pqwc"/>
+<img alt="Client logo 3" class="h-8 grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition-all" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCR85ML-cePHNRpFdSgTJPqK5v702V37AOuZQYtMI8I_UpD5zEQXibju9emETsKfULLD2jTnxntV9vB9z4oeCDD4XoYOtdq1tnqiit6AVqw2nMnOHkzeWvKZU3L7Jhv-X_RvxD0ii6hPDZ69t0xpQWbABwDzd3HTxYtKWkX4rmdy94Fa2neWFX0byS_By-uGbeH3gk6HpfUwBhp2lDdv42uPIpLp6L2ozTf2oaVdAP_Y3uTwgxKO7_sYEki4YTdw2FdVRzeYd1voCI"/>
+<img alt="Client logo 4" class="h-8 grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition-all" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCck4Cgai5WZ6PpjmREkR1T-NnDbknGFQUtKJQ9oCqd7-DSsbKJrQaW9GQ4atOp5WpDZ1GNYc3kX5W5c_jVE8dKtJRFp7xebfSiTlfrGjtQm_-M4zf9HXFIivJZYapiUqAfxcZBihejSlG9j1dM9qCh1YKPp4_JnApMz3ir_ffMdpa39v4HtA0U9AM0oLDTUxfNrca9fYiKPSeqv4K8TOIuk_mW6B17KacNwY6qqKTR0HRqXUOOIbRcNz4K70XM0q640ILTu7kDpKk"/>
+<img alt="Client logo 5" class="h-8 grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition-all" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgrMaypkdR3CPqwANd3VxFczMo-hDXzQ3DTcVRnxrmnbtUvka6RTrB_tcQsS0-XG8Q1QnzsZoL13UQ3JIUgPd2H6W1q2FC1se3VcH0hnINqp0DOK5D0tMIO0HCXWj9sHJ2Eq016Do0flYeLA9J6Yqa6hwRS5rtISeWVSP_J2xcmextkRAtnvD4hwdXc9SgtqRvkkIFb2BYjzNlM_inxRFp0W5yZ7UJOJuE-R0SqEhdMg__ExDb2yNRa1YSBB38HXU0gtoQcNyO7s8"/>
+</div>
+</div>
+</section>
+</main>
+<footer class="border-t border-border-dark py-16">
+<div class="mx-auto max-w-7xl px-6">
+<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
+<div class="col-span-2 flex flex-col gap-4">
+<div class="flex items-center gap-3">
+<div class="size-8 text-primary">
+<svg fill="currentColor" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M39.475 21.6262C40.358 21.4363 40.6863 21.5589 40.7581 21.5934C40.7876 21.655 40.8547 21.857 40.8082 22.3336C40.7408 23.0255 40.4502 24.0046 39.8572 25.2301C38.6799 27.6631 36.5085 30.6631 33.5858 33.5858C30.6631 36.5085 27.6632 38.6799 25.2301 39.8572C24.0046 40.4502 23.0255 40.7407 22.3336 40.8082C21.8571 40.8547 21.6551 40.7875 21.5934 40.7581C21.5589 40.6863 21.4363 40.358 21.6262 39.475C21.8562 38.4054 22.4689 36.9657 23.5038 35.2817C24.7575 33.2417 26.5497 30.9744 28.7621 28.762C30.9744 26.5497 33.2417 24.7574 35.2817 23.5037C36.9657 22.4689 38.4054 21.8562 39.475 21.6262ZM4.41189 29.2403L18.7597 43.5881C19.8813 44.7097 21.4027 44.9179 22.7217 44.7893C24.0585 44.659 25.5148 44.1631 26.9723 43.4579C29.9052 42.0387 33.2618 39.5667 36.4142 36.4142C39.5667 33.2618 42.0387 29.9052 43.4579 26.9723C44.1631 25.5148 44.659 24.0585 44.7893 22.7217C44.9179 21.4027 44.7097 19.8813 43.5881 18.7597L29.2403 4.41187C27.8527 3.02428 25.8765 3.02573 24.2861 3.36776C22.6081 3.72863 20.7334 4.58419 18.8396 5.74801C16.4978 7.18716 13.9881 9.18353 11.5858 11.5858C9.18354 13.988 7.18717 16.4978 5.74802 18.8396C4.58421 20.7334 3.72865 22.6081 3.36778 24.2861C3.02574 25.8765 3.02429 27.8527 4.41189 29.2403Z" fill-rule="evenodd"></path></svg>
+</div>
+<h2 class="text-white text-xl font-bold">AITS Consulting</h2>
+</div>
+<p class="text-text-muted text-sm">Data-driven solutions for a safer tomorrow.</p>
+</div>
+<div class="flex flex-col gap-4 col-start-1 md:col-start-2 lg:col-start-4">
+<h4 class="text-white font-semibold">Company</h4>
+<a class="text-text-muted hover:text-white transition-colors text-sm" href="#">About Us</a>
+<a class="text-text-muted hover:text-white transition-colors text-sm" href="#">Blog</a>
+<a class="text-text-muted hover:text-white transition-colors text-sm" href="#">Careers</a>
+<a class="text-text-muted hover:text-white transition-colors text-sm" href="#">Contact Us</a>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="text-white font-semibold">Solutions</h4>
+<a class="text-text-muted hover:text-white transition-colors text-sm" href="#">Predictive Analytics</a>
+<a class="text-text-muted hover:text-white transition-colors text-sm" href="#">Driver Monitoring</a>
+<a class="text-text-muted hover:text-white transition-colors text-sm" href="#">Compliance</a>
+<a class="text-text-muted hover:text-white transition-colors text-sm" href="#">Case Studies</a>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="text-white font-semibold">Connect</h4>
+<div class="flex gap-4">
+<a class="text-text-muted hover:text-white transition-colors" href="#">
+<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M22.23 0H1.77C.79 0 0 .79 0 1.77v20.46C0 23.21.79 24 1.77 24h11.23v-9.29H9.98v-3.62h3.02V8.41c0-3.01 1.79-4.66 4.52-4.66 1.3 0 2.69.24 2.69.24v3.08h-1.58c-1.48 0-1.93.93-1.93 1.84v2.23h3.44l-.55 3.62h-2.89V24h5.95c.98 0 1.77-.79 1.77-1.77V1.77C24 .79 23.21 0 22.23 0z"></path></svg>
+</a>
+<a class="text-text-muted hover:text-white transition-colors" href="#">
+<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.223.085c.645 1.956 2.523 3.379 4.748 3.419A9.9 9.9 0 010 19.54a13.94 13.94 0 007.548 2.212c9.058 0 14.01-7.502 14.01-14.01 0-.213-.005-.426-.015-.637a10.035 10.035 0 002.456-2.54z"></path></svg>
+</a>
+<a class="text-text-muted hover:text-white transition-colors" href="#">
+<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M21.543 0H2.457C1.1 0 0 1.1 0 2.457v19.086C0 22.9 1.1 24 2.457 24h19.086C22.9 24 24 22.9 24 21.543V2.457C24 1.1 22.9 0 21.543 0zM7.125 19.5H3.562V8.625h3.563V19.5zM5.344 7.219a1.875 1.875 0 110-3.75 1.875 1.875 0 010 3.75zM19.5 19.5h-3.562v-5.25c0-1.25-.031-2.844-1.75-2.844-1.75 0-2.031 1.375-2.031 2.75v5.344H8.625V8.625h3.438v1.563h.031c.469-1 1.625-1.875 3.375-1.875 3.594 0 4.25 2.375 4.25 5.469v6.718z"></path></svg>
+</a>
+</div>
+</div>
+</div>
+<div class="mt-16 pt-8 border-t border-border-dark text-center text-text-muted text-sm">
+<p>© 2024 AITS Consulting. All Rights Reserved.</p>
+</div>
+</div>
+</footer>
+</div>
+
+</body></html>

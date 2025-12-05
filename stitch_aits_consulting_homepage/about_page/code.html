@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>About Page - AITS Consulting</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#195de6",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#111621",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark text-[#0e121b] dark:text-gray-200">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<header class="sticky top-0 z-50 w-full bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm">
+<div class="px-4 sm:px-10 lg:px-20 xl:px-40 flex justify-center">
+<div class="flex items-center justify-between whitespace-nowrap border-b border-solid border-[#e7ebf3] dark:border-gray-700 px-4 sm:px-10 py-3 w-full max-w-[1280px]">
+<div class="flex items-center gap-4 text-[#0e121b] dark:text-white">
+<div class="size-6 text-primary">
+<svg fill="currentColor" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M39.475 21.6262C40.358 21.4363 40.6863 21.5589 40.7581 21.5934C40.7876 21.655 40.8547 21.857 40.8082 22.3336C40.7408 23.0255 40.4502 24.0046 39.8572 25.2301C38.6799 27.6631 36.5085 30.6631 33.5858 33.5858C30.6631 36.5085 27.6632 38.6799 25.2301 39.8572C24.0046 40.4502 23.0255 40.7407 22.3336 40.8082C21.8571 40.8547 21.6551 40.7875 21.5934 40.7581C21.5589 40.6863 21.4363 40.358 21.6262 39.475C21.8562 38.4054 22.4689 36.9657 23.5038 35.2817C24.7575 33.2417 26.5497 30.9744 28.7621 28.762C30.9744 26.5497 33.2417 24.7574 35.2817 23.5037C36.9657 22.4689 38.4054 21.8562 39.475 21.6262ZM4.41189 29.2403L18.7597 43.5881C19.8813 44.7097 21.4027 44.9179 22.7217 44.7893C24.0585 44.659 25.5148 44.1631 26.9723 43.4579C29.9052 42.0387 33.2618 39.5667 36.4142 36.4142C39.5667 33.2618 42.0387 29.9052 43.4579 26.9723C44.1631 25.5148 44.659 24.0585 44.7893 22.7217C44.9179 21.4027 44.7097 19.8813 43.5881 18.7597L29.2403 4.41187C27.8527 3.02428 25.8765 3.02573 24.2861 3.36776C22.6081 3.72863 20.7334 4.58419 18.8396 5.74801C16.4978 7.18716 13.9881 9.18353 11.5858 11.5858C9.18354 13.988 7.18717 16.4978 5.74802 18.8396C4.58421 20.7334 3.72865 22.6081 3.36778 24.2861C3.02574 25.8765 3.02429 27.8527 4.41189 29.2403Z" fill-rule="evenodd"></path>
+</svg>
+</div>
+<h2 class="text-[#0e121b] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">AITS Consulting</h2>
+</div>
+<div class="hidden md:flex flex-1 justify-end gap-8">
+<div class="flex items-center gap-9">
+<a class="text-[#0e121b] dark:text-gray-300 dark:hover:text-white text-sm font-medium leading-normal" href="#">Home</a>
+<a class="text-[#0e121b] dark:text-gray-300 dark:hover:text-white text-sm font-medium leading-normal" href="#">Solutions</a>
+<a class="text-primary dark:text-primary text-sm font-bold leading-normal" href="#">About Us</a>
+<a class="text-[#0e121b] dark:text-gray-300 dark:hover:text-white text-sm font-medium leading-normal" href="#">Blog</a>
+<a class="text-[#0e121b] dark:text-gray-300 dark:hover:text-white text-sm font-medium leading-normal" href="#">Contact</a>
+</div>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors">
+<span class="truncate">Request a Demo</span>
+</button>
+</div>
+<div class="md:hidden">
+<button class="text-[#0e121b] dark:text-white">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</div>
+</div>
+</div>
+</header>
+<main class="flex flex-1 justify-center py-5">
+<div class="layout-content-container flex flex-col max-w-[1280px] flex-1 px-4 sm:px-10 lg:px-20">
+<div class="@container px-0 sm:px-4 lg:px-10">
+<div class="@[480px]:p-4">
+<div class="flex min-h-[480px] flex-col gap-6 bg-cover bg-center bg-no-repeat @[480px]:gap-8 rounded-xl items-start justify-end px-4 pb-10 @[480px]:px-10" data-alt="Abstract image of a modern highway interchange at dusk, conveying motion and technology" style='background-image: linear-gradient(rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.5) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuDuxbdzJzs6REWrwNV8tRJvUBTnY7xE0BZvqGdOBLdbAv6uvt9fyz83iqc9jpWJ41UwjFmLNrfvRKWjZWRMXkVmhSqznY5m5dCqBa4Z_pqC_PTOwZyhlWbF8kyq1nL2HCsLHn45i1Ao91UkS0VrAo7hYyvLNJ3mHJMCfqsSPDAVBsHu3geqSj92dkkjZJ0-99NJNNzSQOtoSX3z3kALBZmE4v6_d2S6_Z64yht_GdCHvAY5KGwMeOGiHmHaWJlV_0MRAocSHZCgxuA");'>
+<div class="flex flex-col gap-2 text-left max-w-3xl">
+<h1 class="text-white text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-5xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em]">Pioneering the Future of Fleet Safety and Efficiency</h1>
+<h2 class="text-white/90 text-sm font-normal leading-normal @[480px]:text-base @[480px]:font-normal @[480px]:leading-normal">AITS Consulting is dedicated to providing innovative solutions that protect your drivers, assets, and bottom line. Discover the minds and mission driving our commitment to excellence.</h2>
+</div>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 @[480px]:h-12 @[480px]:px-5 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base @[480px]:font-bold @[480px]:leading-normal @[480px]:tracking-[0.015em] hover:bg-primary/90 transition-colors">
+<span class="truncate">Our Solutions</span>
+</button>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-10 px-4 sm:px-8 lg:px-20 py-16 @container">
+<div class="flex flex-col gap-4">
+<h1 class="text-[#0e121b] dark:text-white tracking-tight text-[32px] font-bold leading-tight @[480px]:text-4xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em] max-w-[720px]">Defining Our Purpose and Direction</h1>
+<p class="text-gray-700 dark:text-gray-300 text-base font-normal leading-normal max-w-[720px]">At the core of AITS Consulting is a clear mission to enhance road safety and a vision to be the leading partner in fleet management technology.</p>
+</div>
+<div class="grid grid-cols-[repeat(auto-fit,minmax(280px,1fr))] gap-6 p-0">
+<div class="flex flex-1 gap-4 rounded-xl border border-gray-200 dark:border-gray-700 bg-background-light dark:bg-background-dark p-6 flex-col">
+<div class="text-primary">
+<span class="material-symbols-outlined text-4xl">track_changes</span>
+</div>
+<div class="flex flex-col gap-2">
+<h2 class="text-[#0e121b] dark:text-white text-lg font-bold leading-tight">Our Mission</h2>
+<p class="text-gray-600 dark:text-gray-400 text-sm font-normal leading-normal">To empower fleets with intelligent, data-driven safety solutions that prevent accidents, reduce risk, and save lives.</p>
+</div>
+</div>
+<div class="flex flex-1 gap-4 rounded-xl border border-gray-200 dark:border-gray-700 bg-background-light dark:bg-background-dark p-6 flex-col">
+<div class="text-primary">
+<span class="material-symbols-outlined text-4xl">visibility</span>
+</div>
+<div class="flex flex-col gap-2">
+<h2 class="text-[#0e121b] dark:text-white text-lg font-bold leading-tight">Our Vision</h2>
+<p class="text-gray-600 dark:text-gray-400 text-sm font-normal leading-normal">To create a world where every commercial journey is safe, efficient, and sustainable through technological innovation.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-white dark:bg-gray-900/50 py-16 px-4 sm:px-8 lg:px-20 rounded-xl">
+<div class="flex flex-col gap-12">
+<div class="text-center max-w-2xl mx-auto">
+<h2 class="text-3xl font-bold tracking-tight text-[#0e121b] dark:text-white sm:text-4xl">Our Core Values</h2>
+<p class="mt-4 text-lg leading-8 text-gray-600 dark:text-gray-400">The principles that guide our work, our partnerships, and our commitment to the road ahead.</p>
+</div>
+<div class="grid grid-cols-1 gap-x-8 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
+<div class="flex flex-col items-center text-center p-4">
+<div class="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-primary/20 text-primary">
+<span class="material-symbols-outlined">shield</span>
+</div>
+<h3 class="text-lg font-semibold leading-7 text-[#0e121b] dark:text-white">Safety First</h3>
+<p class="mt-2 text-base leading-7 text-gray-600 dark:text-gray-400">Our unwavering commitment is to the well-being of drivers and the public.</p>
+</div>
+<div class="flex flex-col items-center text-center p-4">
+<div class="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-primary/20 text-primary">
+<span class="material-symbols-outlined">lightbulb</span>
+</div>
+<h3 class="text-lg font-semibold leading-7 text-[#0e121b] dark:text-white">Innovation</h3>
+<p class="mt-2 text-base leading-7 text-gray-600 dark:text-gray-400">We continuously push the boundaries of technology to create smarter solutions.</p>
+</div>
+<div class="flex flex-col items-center text-center p-4">
+<div class="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-primary/20 text-primary">
+<span class="material-symbols-outlined">verified</span>
+</div>
+<h3 class="text-lg font-semibold leading-7 text-[#0e121b] dark:text-white">Integrity</h3>
+<p class="mt-2 text-base leading-7 text-gray-600 dark:text-gray-400">We operate with transparency, honesty, and a strong sense of ethical responsibility.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="py-16 px-4 sm:px-8 lg:px-20">
+<div class="text-center max-w-2xl mx-auto mb-12">
+<h2 class="text-3xl font-bold tracking-tight text-[#0e121b] dark:text-white sm:text-4xl">Meet the Team</h2>
+<p class="mt-4 text-lg leading-8 text-gray-600 dark:text-gray-400">The experts driving our mission forward with passion and dedication.</p>
+</div>
+<div class="grid grid-cols-1 gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+<div class="flex flex-col items-center text-center">
+<img class="h-40 w-40 rounded-full object-cover" data-alt="Professional headshot of Johnathan Doe" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAO4f08umUyfY46OuogGpV2vMRaI7VIa7PKEURO7_DpuLSUPeqgjoQLCBFOa-6aC4xcBHtOyiJWX6mpp7OHj8wP0GT3vWHHXjPh9Zb8Yhn9sWgznezagOEMzOF6RocYgLJPT7pPwEbXULcJSlei2eUoWvhd0aKCR40-LS4JbzAMYe8vxJX8OPqk31-4o6Tet5IU5lm-gCmyGWYiYeyzvtqhNIzx1WL35FbEDcSH0vZnc3YemySaWcfPsml-99i3zDGamlqmW1gDqgM"/>
+<h3 class="mt-6 text-lg font-semibold leading-7 tracking-tight text-[#0e121b] dark:text-white">Johnathan Doe</h3>
+<p class="text-sm font-semibold leading-6 text-primary">Founder &amp; CEO</p>
+</div>
+<div class="flex flex-col items-center text-center">
+<img class="h-40 w-40 rounded-full object-cover" data-alt="Professional headshot of Jane Smith" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZfJBfL23znSDJCT8WtUf2rX257DXWdvsI0S6-AeuIAoi5BWhu4dhO6rq54sy2JKC-XZ0RNDUN4e9zoYQupL1v0MBfnS6Wlr9lHrtdLQGtP2_p6BBMOuZQoophRMMHJ80qJ7nCfLhiqGPtfevOKq4hD1YRiYsl9aORzCPzDSRTJMGT_k4f5RoL1gBa7swCssypbtgteIvXANF3J1DyQBG_6BgzuWa9T3OkZg2s3pRlnpX9DYckDejbBHMd7jK2Tr5hu89DgCa3NrE"/>
+<h3 class="mt-6 text-lg font-semibold leading-7 tracking-tight text-[#0e121b] dark:text-white">Jane Smith</h3>
+<p class="text-sm font-semibold leading-6 text-primary">Chief Technology Officer</p>
+</div>
+<div class="flex flex-col items-center text-center">
+<img class="h-40 w-40 rounded-full object-cover" data-alt="Professional headshot of David Chen" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkC9TAlQb2s8xh83rOu_ggHBGEhMW0XCZZvPqS-FuEukuGaLORcOv01RyH1hrNSFBDMoaHp3nNTA_jEY0-mwWxL995MzrHH1-iZiPaHridW91mOwaPU2Tn6KWdBzvBPd2PqVknbrgvggFTX0JWJJePs7XjBYMiRyY-L7ickxnA0fuBbalSxfzwobQM2ibUg81KtOGguEKTqFM6PPC_flBb09u2L99hFO2YtR1QW92WT5o0j7slDtE7p-Bh_JjYE0P0ODbmCm6zCxA"/>
+<h3 class="mt-6 text-lg font-semibold leading-7 tracking-tight text-[#0e121b] dark:text-white">David Chen</h3>
+<p class="text-sm font-semibold leading-6 text-primary">Head of Product</p>
+</div>
+<div class="flex flex-col items-center text-center">
+<img class="h-40 w-40 rounded-full object-cover" data-alt="Professional headshot of Michael Brown" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2bc3TH6c5M8L1t413z_w9N-5msxCQ-MaF7qDxk_nU8pqkcPqKuSdrmIyWkowMRIik9Jpv05tN0wHDusSV4yMEEYA13iMWs7qRDejq9Vbh_C-UUziR_FndXJxhbrasElUyugwq3b5pkkdZxe-aasDmzfnefrYDKzcf9_PervAIpyazxje9OiZQTB7AtxB0RxstNob1LmHyPaR7pD6fR7sDfVo_-mLmk-O2Fv91JheEG3P_EY4RVlMJSEbOouzVz1QsF0slnFfeB1A"/>
+<h3 class="mt-6 text-lg font-semibold leading-7 tracking-tight text-[#0e121b] dark:text-white">Michael Brown</h3>
+<p class="text-sm font-semibold leading-6 text-primary">Lead Safety Consultant</p>
+</div>
+</div>
+</div>
+<div class="relative bg-gray-800 dark:bg-background-dark py-16 px-4 sm:px-8 lg:px-20 my-16 rounded-xl overflow-hidden">
+<img class="absolute inset-0 -z-10 h-full w-full object-cover object-right md:object-center opacity-20" data-alt="Abstract blue and purple light trails pattern" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvU9QXtukjOrSGqpK-fy0xzu4Fr8uPDbb4gURsJ0O2ee-Hxd2cowckh5rDV7vN0gbTZaD2jGsr951_C-YlVueQp7OSw8PwYR3IrSVeDuqV23Cjxh3y4Wsmo4KOxDO7MZshs5s7zynnCDfOO9wNZDWhtEr23qk8r8Y5UNSshv_QZn5g9g28hjgqrBYuoEIqr5QUUzrYiVFvGDdiX9K0mpqlRKa3C8cIokoxyk6hHsRg01rU67B2aNTUeweoWYTUmeUshG-3STv-HQM"/>
+<div class="mx-auto max-w-2xl text-center">
+<h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">Ready to enhance your fleet's safety?</h2>
+<p class="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">Join the growing number of companies partnering with AITS Consulting to build a safer, more efficient future on the road.</p>
+<div class="mt-10 flex items-center justify-center gap-x-6">
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-primary text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors">
+<span class="truncate">Work With Us</span>
+</button>
+<a class="text-sm font-semibold leading-6 text-white hover:text-gray-200" href="#">Learn more <span aria-hidden="true">→</span></a>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+</body></html>

@@ -1,0 +1,141 @@
+/* HubSpot Form Block - Frontend Styles */
+
+.wp-block-stitch-form-hubspot {
+	margin: 1.5em 0;
+	padding: 0;
+}
+
+.wp-block-stitch-form-hubspot.alignwide {
+	max-width: 100%;
+}
+
+.wp-block-stitch-form-hubspot.alignfull {
+	margin-left: calc( -1 * var( --wp--style--root--padding-left, 0 ) );
+	margin-right: calc( -1 * var( --wp--style--root--padding-right, 0 ) );
+	padding-left: var( --wp--style--root--padding-left, 0 );
+	padding-right: var( --wp--style--root--padding-right, 0 );
+	width: 100vw;
+	max-width: none;
+	position: relative;
+	left: calc( -1 * var( --wp--style--root--padding-left, 0 ) );
+}
+
+.hubspot-form-title {
+	margin: 0 0 1.5em 0;
+	padding: 0;
+	font-size: 28px;
+	font-weight: 600;
+	line-height: 1.2;
+	color: inherit;
+}
+
+.hubspot-form-description {
+	margin: 0 0 1.5em 0;
+	padding: 0;
+	font-size: 16px;
+	line-height: 1.6;
+	color: #666;
+}
+
+.hubspot-form-description p {
+	margin: 0 0 1em 0;
+}
+
+.hubspot-form-description p:last-child {
+	margin-bottom: 0;
+}
+
+.hubspot-form-container {
+	margin-top: 1.5em;
+	padding: 0;
+}
+
+/* HubSpot form styles */
+.hubspot-form-container .hs-form-private {
+	max-width: 100%;
+}
+
+.hubspot-form-container .hs-form-field {
+	margin-bottom: 15px;
+}
+
+.hubspot-form-container label {
+	display: block;
+	margin-bottom: 0.5em;
+	font-weight: 500;
+	color: #333;
+}
+
+.hubspot-form-container input[type="text"],
+.hubspot-form-container input[type="email"],
+.hubspot-form-container input[type="tel"],
+.hubspot-form-container textarea,
+.hubspot-form-container select {
+	width: 100%;
+	padding: 10px 12px;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	font-size: 16px;
+	font-family: inherit;
+	transition: border-color 0.3s ease;
+}
+
+.hubspot-form-container input[type="text"]:focus,
+.hubspot-form-container input[type="email"]:focus,
+.hubspot-form-container input[type="tel"]:focus,
+.hubspot-form-container textarea:focus,
+.hubspot-form-container select:focus {
+	outline: none;
+	border-color: #0073aa;
+	box-shadow: 0 0 0 3px rgba( 0, 115, 170, 0.1 );
+}
+
+.hubspot-form-container textarea {
+	min-height: 120px;
+	resize: vertical;
+}
+
+.hubspot-form-container button,
+.hubspot-form-container input[type="submit"] {
+	background-color: #0073aa;
+	color: #fff;
+	padding: 12px 24px;
+	border: none;
+	border-radius: 4px;
+	font-size: 16px;
+	font-weight: 600;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+.hubspot-form-container button:hover,
+.hubspot-form-container input[type="submit"]:hover {
+	background-color: #005a87;
+}
+
+.hubspot-form-container .hs-error-msgs {
+	margin-bottom: 15px;
+	padding: 12px;
+	background-color: #fee;
+	border: 1px solid #fcc;
+	border-radius: 4px;
+	color: #c33;
+}
+
+.hubspot-form-container .hs-error-msgs li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+	.hubspot-form-title {
+		font-size: 24px;
+	}
+
+	.hubspot-form-container button,
+	.hubspot-form-container input[type="submit"] {
+		width: 100%;
+	}
+}

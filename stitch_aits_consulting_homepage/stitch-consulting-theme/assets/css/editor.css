@@ -1,0 +1,222 @@
+/* Stitch Consulting Theme - Block Editor Styles */
+
+/* Editor typography */
+.block-editor-writing-flow {
+	font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Headings in editor */
+.block-editor-block-list__block h1,
+.block-editor-block-list__block h2,
+.block-editor-block-list__block h3,
+.block-editor-block-list__block h4,
+.block-editor-block-list__block h5,
+.block-editor-block-list__block h6 {
+	font-family: inherit;
+	font-weight: 700;
+}
+
+/* Button blocks */
+.wp-block-buttons .wp-block-button__link {
+	border-radius: 0.5rem;
+	font-weight: 700;
+}
+
+.wp-block-buttons .wp-block-button__link:not(.has-background) {
+	background-color: #195de6;
+	color: white;
+}
+
+/* Code block */
+.wp-block-code {
+	background-color: #141414;
+	color: #E9ECEF;
+	border-radius: 0.5rem;
+	padding: 1.5rem;
+	font-family: "Courier New", monospace;
+	font-size: 0.875rem;
+	overflow-x: auto;
+}
+
+/* Quote block */
+.wp-block-quote {
+	border-left: 4px solid #195de6;
+	padding-left: 2rem;
+	margin: 0;
+	font-style: italic;
+	color: #A3A3A3;
+}
+
+/* Table block */
+.wp-block-table {
+	border-collapse: collapse;
+	width: 100%;
+	margin: 1.5rem 0;
+}
+
+.wp-block-table table {
+	width: 100%;
+	border: 1px solid #262626;
+	border-radius: 0.5rem;
+}
+
+.wp-block-table th,
+.wp-block-table td {
+	padding: 1rem;
+	border-bottom: 1px solid #262626;
+	text-align: left;
+}
+
+.wp-block-table th {
+	background-color: #141414;
+	font-weight: 600;
+}
+
+/* Columns block */
+.wp-block-columns {
+	gap: 2rem;
+}
+
+.wp-block-column {
+	flex-grow: 1;
+}
+
+/* Spacer block */
+.wp-block-spacer {
+	background-color: transparent;
+}
+
+/* Gallery block */
+.wp-block-gallery {
+	gap: 2rem;
+}
+
+/* Image block */
+.wp-block-image {
+	margin: 2rem 0;
+}
+
+.wp-block-image img {
+	border-radius: 0.5rem;
+	max-width: 100%;
+	height: auto;
+}
+
+/* Separator block */
+.wp-block-separator {
+	background-color: #262626;
+	opacity: 1;
+	margin: 3rem 0;
+	height: 1px;
+}
+
+/* List blocks */
+.wp-block-list {
+	margin-left: 2rem;
+}
+
+.wp-block-list li {
+	margin-bottom: 0.75rem;
+}
+
+/* Group block */
+.wp-block-group {
+	margin: 2rem 0;
+}
+
+/* Paragraph block */
+.wp-block-paragraph {
+	margin-bottom: 1.5rem;
+	line-height: 1.75;
+}
+
+/* Editor container */
+.editor-styles-wrapper {
+	background-color: #0A0A0A;
+	color: #FFFFFF;
+}
+
+.editor-styles-wrapper a {
+	color: #195de6;
+}
+
+/* Block styling */
+.wp-block {
+	margin-bottom: 2rem;
+}
+
+/* Nested block padding */
+.wp-block-group > .wp-block {
+	margin-bottom: 1.5rem;
+}
+
+/* Alignment helpers */
+.alignfull {
+	margin-left: calc(-50vw + 50%);
+	margin-right: calc(-50vw + 50%);
+	width: 100vw;
+}
+
+.alignwide {
+	margin-left: -60px;
+	margin-right: -60px;
+	max-width: calc(100% + 120px);
+}
+
+/* Custom block styles */
+.stitch-block {
+	border-radius: 0.5rem;
+	border: 1px solid #262626;
+	padding: 2rem;
+	margin: 2rem 0;
+}
+
+.stitch-block-title {
+	font-size: 1.25rem;
+	font-weight: 700;
+	margin-bottom: 1rem;
+	color: #195de6;
+}
+
+/* Placeholder styles */
+.wp-block-paragraph::placeholder {
+	color: #A3A3A3;
+	opacity: 0.5;
+}
+
+/* Selection styles */
+.wp-block:focus {
+	outline: 2px solid #195de6;
+	outline-offset: 0;
+}
+
+/* Hover styles */
+.block-editor-block-list__block:hover {
+	background-color: rgba(25, 93, 230, 0.05);
+	border-radius: 0.5rem;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: light) {
+	.editor-styles-wrapper {
+		background-color: #f6f6f8;
+		color: #333;
+	}
+
+	.wp-block-code {
+		background-color: #f5f5f5;
+		color: #333;
+	}
+
+	.wp-block-quote {
+		color: #666;
+	}
+
+	.stitch-block {
+		border-color: #DEE2E6;
+	}
+
+	.block-editor-block-list__block:hover {
+		background-color: rgba(25, 93, 230, 0.08);
+	}
+}

@@ -1,0 +1,66 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "stitch/form",
+	"title": "Form",
+	"category": "design",
+	"description": "Contact form with input fields and validation",
+	"icon": "feedback",
+	"keywords": ["form", "contact", "input"],
+	"version": "1.0.0",
+	"supports": {
+		"html": false,
+		"color": {
+			"background": true,
+			"text": true
+		},
+		"spacing": {
+			"padding": true
+		}
+	},
+	"textdomain": "stitch",
+	"attributes": {
+		"fields": {
+			"type": "array",
+			"default": [
+				{
+					"id": "name",
+					"type": "text",
+					"label": "Name",
+					"placeholder": "Your name",
+					"required": true
+				},
+				{
+					"id": "email",
+					"type": "email",
+					"label": "Email",
+					"placeholder": "your@email.com",
+					"required": true
+				},
+				{
+					"id": "message",
+					"type": "textarea",
+					"label": "Message",
+					"placeholder": "Your message",
+					"required": true
+				}
+			]
+		},
+		"submitButtonText": {
+			"type": "string",
+			"default": "Send Message"
+		},
+		"successMessage": {
+			"type": "string",
+			"default": "Thank you! We'll get back to you soon."
+		},
+		"formAction": {
+			"type": "string",
+			"default": "email"
+		}
+	},
+	"editorScript": "file:./edit.js",
+	"editorStyle": "file:./edit.css",
+	"style": "file:./style.css",
+	"render": "file:./render.php"
+}

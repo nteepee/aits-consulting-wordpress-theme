@@ -1,0 +1,21 @@
+/* Feature Card Block Editor Styles */
+.wp-block-stitch-feature-card {
+	border-radius: 12px;
+	overflow: hidden;
+}
+
+.wp-block-stitch-feature-card.is-selected {
+	box-shadow: 0 0 0 3px rgba(25, 93, 230, 0.2);
+}
+
+.wp-block-stitch-feature-card__icon {
+	font-family: "Material Symbols Outlined";
+}
+
+.wp-block-stitch-feature-card__title {
+	font-family: Inter, sans-serif;
+}
+
+.wp-block-stitch-feature-card__description {
+	font-family: Inter, sans-serif;
+}

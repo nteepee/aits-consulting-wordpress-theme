@@ -1,0 +1,435 @@
+/*
+Theme Name: Stitch Consulting Theme
+Theme URI: https://www.stitch-consulting.com/
+Author: Stitch Consulting
+Author URI: https://www.stitch-consulting.com/
+Description: A modern block theme for Stitch Consulting - passenger safety and fleet monitoring solutions
+Version: 1.0.0
+License: GPL v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: stitch-consulting
+Domain Path: /languages
+Requires at least: 6.0
+Requires PHP: 7.4
+*/
+
+/* ======================================
+   CSS Custom Properties (Variables)
+   ====================================== */
+
+:root {
+	/* Brand Colors */
+	--wp-preset-color-primary: #195de6;
+	--wp-preset-color-primary-light: #5b9fff;
+	--wp-preset-color-primary-dark: #0d47a1;
+
+	/* Neutral Colors */
+	--wp-preset-color-background: #ffffff;
+	--wp-preset-color-foreground: #1a1a1a;
+	--wp-preset-color-surface: #f5f5f5;
+	--wp-preset-color-border: #e0e0e0;
+
+	/* Text Colors */
+	--wp-preset-color-text-primary: #1a1a1a;
+	--wp-preset-color-text-secondary: #666666;
+	--wp-preset-color-text-light: #999999;
+
+	/* Semantic Colors */
+	--wp-preset-color-success: #4caf50;
+	--wp-preset-color-warning: #ff9800;
+	--wp-preset-color-error: #f44336;
+	--wp-preset-color-info: #2196f3;
+
+	/* Spacing Scale (8px base) */
+	--wp-preset-spacing-1: 0.5rem;
+	--wp-preset-spacing-2: 1rem;
+	--wp-preset-spacing-3: 1.5rem;
+	--wp-preset-spacing-4: 2rem;
+	--wp-preset-spacing-5: 2.5rem;
+	--wp-preset-spacing-6: 3rem;
+	--wp-preset-spacing-7: 4rem;
+	--wp-preset-spacing-8: 6rem;
+	--wp-preset-spacing-9: 8rem;
+
+	/* Typography */
+	--wp-preset-font-family-base: -apple-system, BlinkMacSystemFont, "Segoe UI", "Inter", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+	--wp-preset-font-family-heading: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+	--wp-preset-font-size-xs: 0.75rem;
+	--wp-preset-font-size-sm: 0.875rem;
+	--wp-preset-font-size-base: 1rem;
+	--wp-preset-font-size-lg: 1.125rem;
+	--wp-preset-font-size-xl: 1.25rem;
+	--wp-preset-font-size-2xl: 1.5rem;
+	--wp-preset-font-size-3xl: 1.875rem;
+	--wp-preset-font-size-4xl: 2.25rem;
+	--wp-preset-font-size-5xl: 3rem;
+
+	/* Line Heights */
+	--wp-preset-line-height-tight: 1.2;
+	--wp-preset-line-height-normal: 1.5;
+	--wp-preset-line-height-relaxed: 1.75;
+
+	/* Responsive Breakpoints */
+	--wp-breakpoint-sm: 640px;
+	--wp-breakpoint-md: 768px;
+	--wp-breakpoint-lg: 1024px;
+	--wp-breakpoint-xl: 1280px;
+	--wp-breakpoint-2xl: 1536px;
+
+	/* Shadows */
+	--wp-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+	--wp-shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+	--wp-shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+	--wp-shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.1);
+
+	/* Border Radius */
+	--wp-border-radius-sm: 4px;
+	--wp-border-radius-md: 6px;
+	--wp-border-radius-lg: 8px;
+	--wp-border-radius-xl: 12px;
+
+	/* Transitions */
+	--wp-transition-duration: 200ms;
+	--wp-transition-timing: ease-in-out;
+}
+
+/* ======================================
+   Base Styles
+   ====================================== */
+
+html {
+	font-size: 16px;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	background-color: var(--wp-preset-color-background);
+	color: var(--wp-preset-color-text-primary);
+	font-family: var(--wp-preset-font-family-base);
+	font-size: var(--wp-preset-font-size-base);
+	line-height: var(--wp-preset-line-height-normal);
+	-webkit-text-size-adjust: 100%;
+}
+
+/* ======================================
+   Typography
+   ====================================== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin-top: 0;
+	margin-bottom: var(--wp-preset-spacing-2);
+	font-family: var(--wp-preset-font-family-heading);
+	font-weight: 600;
+	line-height: var(--wp-preset-line-height-tight);
+	color: var(--wp-preset-color-text-primary);
+}
+
+h1,
+.wp-block-heading-1 {
+	font-size: var(--wp-preset-font-size-5xl);
+}
+
+h2,
+.wp-block-heading-2 {
+	font-size: var(--wp-preset-font-size-4xl);
+}
+
+h3,
+.wp-block-heading-3 {
+	font-size: var(--wp-preset-font-size-3xl);
+}
+
+h4,
+.wp-block-heading-4 {
+	font-size: var(--wp-preset-font-size-2xl);
+}
+
+h5,
+.wp-block-heading-5 {
+	font-size: var(--wp-preset-font-size-xl);
+}
+
+h6,
+.wp-block-heading-6 {
+	font-size: var(--wp-preset-font-size-lg);
+}
+
+p {
+	margin-top: 0;
+	margin-bottom: var(--wp-preset-spacing-2);
+}
+
+small,
+.wp-block-paragraph.is-small-text {
+	font-size: var(--wp-preset-font-size-sm);
+}
+
+/* ======================================
+   Links
+   ====================================== */
+
+a {
+	color: var(--wp-preset-color-primary);
+	text-decoration: none;
+	transition: color var(--wp-transition-duration) var(--wp-transition-timing);
+}
+
+a:hover {
+	color: var(--wp-preset-color-primary-dark);
+	text-decoration: underline;
+}
+
+a:focus {
+	outline: 2px solid var(--wp-preset-color-primary);
+	outline-offset: 2px;
+}
+
+a:active {
+	color: var(--wp-preset-color-primary-dark);
+}
+
+/* ======================================
+   Lists
+   ====================================== */
+
+ul,
+ol {
+	margin-top: 0;
+	margin-bottom: var(--wp-preset-spacing-2);
+	padding-left: var(--wp-preset-spacing-4);
+}
+
+li {
+	margin-bottom: var(--wp-preset-spacing-1);
+}
+
+/* ======================================
+   Forms
+   ====================================== */
+
+input,
+textarea,
+select,
+button {
+	font-family: inherit;
+	font-size: inherit;
+	line-height: inherit;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="search"],
+input[type="url"],
+input[type="tel"],
+input[type="number"],
+textarea {
+	padding: var(--wp-preset-spacing-1) var(--wp-preset-spacing-2);
+	border: 1px solid var(--wp-preset-color-border);
+	border-radius: var(--wp-border-radius-md);
+	background-color: var(--wp-preset-color-background);
+	color: var(--wp-preset-color-text-primary);
+	transition: border-color var(--wp-transition-duration) var(--wp-transition-timing);
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="url"]:focus,
+input[type="tel"]:focus,
+input[type="number"]:focus,
+textarea:focus {
+	outline: none;
+	border-color: var(--wp-preset-color-primary);
+	box-shadow: 0 0 0 3px rgba(25, 93, 230, 0.1);
+}
+
+button,
+input[type="button"],
+input[type="submit"],
+input[type="reset"] {
+	padding: var(--wp-preset-spacing-1) var(--wp-preset-spacing-3);
+	border: none;
+	border-radius: var(--wp-border-radius-md);
+	background-color: var(--wp-preset-color-primary);
+	color: white;
+	font-weight: 600;
+	cursor: pointer;
+	transition: background-color var(--wp-transition-duration) var(--wp-transition-timing);
+}
+
+button:hover,
+input[type="button"]:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+	background-color: var(--wp-preset-color-primary-dark);
+}
+
+button:focus,
+input[type="button"]:focus,
+input[type="submit"]:focus,
+input[type="reset"]:focus {
+	outline: 2px solid var(--wp-preset-color-primary);
+	outline-offset: 2px;
+}
+
+/* ======================================
+   Block Editor Styles
+   ====================================== */
+
+.wp-block-image {
+	margin: var(--wp-preset-spacing-3) 0;
+}
+
+.wp-block-image img {
+	max-width: 100%;
+	height: auto;
+	display: block;
+}
+
+.wp-block-quote {
+	margin: var(--wp-preset-spacing-3) 0;
+	padding-left: var(--wp-preset-spacing-3);
+	border-left: 4px solid var(--wp-preset-color-primary);
+	font-style: italic;
+	color: var(--wp-preset-color-text-secondary);
+}
+
+.wp-block-separator {
+	border: none;
+	border-top: 1px solid var(--wp-preset-color-border);
+	margin: var(--wp-preset-spacing-4) 0;
+}
+
+/* ======================================
+   Responsive Design
+   ====================================== */
+
+@media (max-width: 768px) {
+	:root {
+		font-size: 14px;
+	}
+
+	h1,
+	.wp-block-heading-1 {
+		font-size: var(--wp-preset-font-size-3xl);
+	}
+
+	h2,
+	.wp-block-heading-2 {
+		font-size: var(--wp-preset-font-size-2xl);
+	}
+
+	h3,
+	.wp-block-heading-3 {
+		font-size: var(--wp-preset-font-size-xl);
+	}
+}
+
+/* ======================================
+   Dark Mode Support
+   ====================================== */
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--wp-preset-color-background: #1a1a1a;
+		--wp-preset-color-foreground: #ffffff;
+		--wp-preset-color-surface: #2a2a2a;
+		--wp-preset-color-border: #404040;
+		--wp-preset-color-text-primary: #ffffff;
+		--wp-preset-color-text-secondary: #cccccc;
+		--wp-preset-color-text-light: #999999;
+		--wp-preset-color-primary-light: #5b9fff;
+	}
+
+	body {
+		background-color: var(--wp-preset-color-background);
+		color: var(--wp-preset-color-text-primary);
+	}
+
+	input[type="text"],
+	input[type="email"],
+	input[type="password"],
+	input[type="search"],
+	input[type="url"],
+	input[type="tel"],
+	input[type="number"],
+	textarea {
+		background-color: var(--wp-preset-color-surface);
+		color: var(--wp-preset-color-text-primary);
+		border-color: var(--wp-preset-color-border);
+	}
+
+	a {
+		color: var(--wp-preset-color-primary-light);
+	}
+
+	a:hover {
+		color: var(--wp-preset-color-primary);
+	}
+}
+
+/* ======================================
+   Print Styles
+   ====================================== */
+
+@media print {
+	body {
+		background: white;
+		color: black;
+	}
+
+	a {
+		text-decoration: underline;
+	}
+
+	.no-print {
+		display: none;
+	}
+}
+
+/* ======================================
+   Accessibility
+   ====================================== */
+
+.skip-link {
+	position: absolute;
+	top: -40px;
+	left: 0;
+	background: var(--wp-preset-color-primary);
+	color: white;
+	padding: var(--wp-preset-spacing-2);
+	text-decoration: none;
+	z-index: 100;
+}
+
+.skip-link:focus {
+	top: 0;
+}
+
+/* Focus visible for keyboard navigation */
+:focus-visible {
+	outline: 2px solid var(--wp-preset-color-primary);
+	outline-offset: 2px;
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+	}
+}

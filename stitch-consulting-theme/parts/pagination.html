@@ -1,0 +1,35 @@
+<!-- wp:template-part {"slug":"pagination"} -->
+<!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"2rem","bottom":"2rem"}}},"layout":{"type":"constrained","contentSize":"1200px"}} -->
+<div class="wp-block-group alignfull" style="padding-top:2rem;padding-bottom:2rem">
+	<!-- Pagination Navigation -->
+	<!-- wp:query-pagination {"layout":{"type":"flex","justifyContent":"center","flexWrap":"wrap"},"style":{"spacing":{"blockGap":"0.5rem"}}} -->
+	<div class="wp-block-query-pagination">
+		<!-- Previous Button -->
+		<!-- wp:query-pagination-previous {"label":"Previous","showLabel":true} -->
+		<div class="wp-block-query-pagination-previous">
+			<a class="prev page-numbers" href="#">Previous</a>
+		</div>
+		<!-- /wp:query-pagination-previous -->
+
+		<!-- Page Numbers -->
+		<!-- wp:query-pagination-numbers -->
+		<div class="wp-block-query-pagination-numbers">
+			<a class="page-numbers" href="#">1</a>
+			<span class="page-numbers current">2</span>
+			<a class="page-numbers" href="#">3</a>
+			<span class="page-numbers dots">...</span>
+			<a class="page-numbers" href="#">8</a>
+		</div>
+		<!-- /wp:query-pagination-numbers -->
+
+		<!-- Next Button -->
+		<!-- wp:query-pagination-next {"label":"Next","showLabel":true} -->
+		<div class="wp-block-query-pagination-next">
+			<a class="next page-numbers" href="#">Next</a>
+		</div>
+		<!-- /wp:query-pagination-next -->
+	</div>
+	<!-- /wp:query-pagination -->
+</div>
+<!-- /wp:group -->
+<!-- /wp:template-part -->

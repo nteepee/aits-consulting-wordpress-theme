@@ -1,0 +1,25 @@
+/* Card Grid Block Styles */
+.wp-block-stitch-card-grid {
+	display: grid;
+	gap: 24px;
+	width: 100%;
+}
+
+/* Responsive Grid */
+@media (max-width: 1024px) {
+	.wp-block-stitch-card-grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media (max-width: 768px) {
+	.wp-block-stitch-card-grid {
+		grid-template-columns: 1fr;
+		gap: 16px;
+	}
+}
+
+/* Nested cards */
+.wp-block-stitch-card-grid .wp-block-stitch-feature-card {
+	height: 100%;
+}

@@ -1,0 +1,26 @@
+/* Hero Block Editor Styles */
+.wp-block-stitch-hero {
+	border-radius: 8px;
+	overflow: hidden;
+}
+
+.wp-block-stitch-hero.is-selected {
+	box-shadow: 0 0 0 3px rgba(25, 93, 230, 0.2);
+}
+
+.wp-block-stitch-hero__heading {
+	font-size: 3.75rem;
+	font-weight: 900;
+	line-height: 1.2;
+	margin-bottom: 20px;
+	max-width: 800px;
+	color: #FFFFFF;
+}
+
+.wp-block-stitch-hero__subheading {
+	font-size: 1.25rem;
+	line-height: 1.6;
+	margin-bottom: 40px;
+	max-width: 600px;
+	color: #E9ECEF;
+}

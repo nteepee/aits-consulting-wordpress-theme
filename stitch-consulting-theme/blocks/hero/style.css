@@ -1,0 +1,118 @@
+/* Hero Block Styles */
+.wp-block-stitch-hero {
+	position: relative;
+	overflow: hidden;
+}
+
+.wp-block-stitch-hero__container {
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+}
+
+.wp-block-stitch-hero__content {
+	font-family: Inter, sans-serif;
+}
+
+.wp-block-stitch-hero__heading {
+	margin: 0 0 20px 0;
+	color: #FFFFFF;
+	font-family: Inter, sans-serif;
+	font-weight: 900;
+	line-height: 1.2;
+	letter-spacing: -0.033em;
+}
+
+.wp-block-stitch-hero__subheading {
+	margin: 0 0 40px 0;
+	color: #E9ECEF;
+	font-family: Inter, sans-serif;
+	font-weight: 400;
+	line-height: 1.6;
+}
+
+/* Buttons */
+.wp-block-stitch-hero__buttons {
+	display: flex;
+	gap: 16px;
+	justify-content: center;
+	flex-wrap: wrap;
+	flex-direction: row;
+}
+
+.wp-block-stitch-hero__button {
+	font-family: Inter, sans-serif;
+	font-weight: 700;
+	border-radius: 8px;
+	text-decoration: none;
+	display: inline-block;
+	transition: all 0.3s ease;
+	cursor: pointer;
+	border: none;
+	white-space: nowrap;
+}
+
+.wp-block-stitch-hero__button--primary {
+	background-color: #195de6;
+	color: #FFFFFF;
+	padding: 12px 32px;
+	font-size: 1rem;
+}
+
+.wp-block-stitch-hero__button--primary:hover {
+	background-color: #1450c9;
+	transform: translateY(-2px);
+	box-shadow: 0 12px 24px rgba(25, 93, 230, 0.3);
+}
+
+.wp-block-stitch-hero__button--secondary {
+	background-color: transparent;
+	color: #FFFFFF;
+	border: 2px solid #FFFFFF;
+	padding: 10px 30px;
+	font-size: 1rem;
+}
+
+.wp-block-stitch-hero__button--secondary:hover {
+	background-color: rgba(255, 255, 255, 0.1);
+	transform: translateY(-2px);
+	box-shadow: 0 12px 24px rgba(255, 255, 255, 0.2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+	.wp-block-stitch-hero__heading {
+		font-size: 2.25rem;
+	}
+
+	.wp-block-stitch-hero__subheading {
+		font-size: 1rem;
+	}
+
+	.wp-block-stitch-hero__content {
+		padding: 60px 24px;
+	}
+
+	.wp-block-stitch-hero__buttons {
+		flex-direction: column;
+		gap: 12px;
+	}
+
+	.wp-block-stitch-hero__button {
+		width: 100%;
+		text-align: center;
+	}
+}
+
+@media (max-width: 480px) {
+	.wp-block-stitch-hero__heading {
+		font-size: 1.875rem;
+	}
+
+	.wp-block-stitch-hero__subheading {
+		font-size: 0.875rem;
+	}
+
+	.wp-block-stitch-hero__content {
+		padding: 40px 16px;
+	}
+}

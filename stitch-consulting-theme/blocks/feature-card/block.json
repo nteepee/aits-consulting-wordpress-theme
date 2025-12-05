@@ -1,0 +1,52 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "stitch/feature-card",
+	"title": "Feature Card",
+	"category": "design",
+	"description": "Feature card with icon, title, description, and link",
+	"icon": "info",
+	"keywords": ["feature", "card", "icon"],
+	"version": "1.0.0",
+	"supports": {
+		"html": false,
+		"color": {
+			"background": true,
+			"text": true
+		},
+		"spacing": {
+			"padding": true
+		}
+	},
+	"textdomain": "stitch",
+	"attributes": {
+		"icon": {
+			"type": "string",
+			"default": "star"
+		},
+		"title": {
+			"type": "string",
+			"default": "Feature Title"
+		},
+		"description": {
+			"type": "string",
+			"default": "Add a description of this feature"
+		},
+		"linkText": {
+			"type": "string",
+			"default": "Learn More"
+		},
+		"linkUrl": {
+			"type": "string",
+			"default": ""
+		},
+		"variant": {
+			"type": "string",
+			"default": "default"
+		}
+	},
+	"editorScript": "file:./edit.js",
+	"editorStyle": "file:./edit.css",
+	"style": "file:./style.css",
+	"render": "file:./render.php"
+}

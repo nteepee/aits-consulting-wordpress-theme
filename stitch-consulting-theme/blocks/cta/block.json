@@ -1,0 +1,53 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "stitch/cta",
+	"title": "Call to Action",
+	"category": "design",
+	"description": "Call-to-action section with heading, description, and button",
+	"icon": "megaphone",
+	"keywords": ["cta", "call-to-action", "button"],
+	"version": "1.0.0",
+	"supports": {
+		"html": false,
+		"align": ["full"],
+		"color": {
+			"background": true,
+			"text": true
+		},
+		"spacing": {
+			"padding": true
+		}
+	},
+	"textdomain": "stitch",
+	"attributes": {
+		"heading": {
+			"type": "string",
+			"default": "Ready to Get Started?"
+		},
+		"description": {
+			"type": "string",
+			"default": "Let's talk about how we can help your business grow."
+		},
+		"buttonText": {
+			"type": "string",
+			"default": "Contact Us"
+		},
+		"buttonUrl": {
+			"type": "string",
+			"default": ""
+		},
+		"backgroundColor": {
+			"type": "string",
+			"default": "primary"
+		},
+		"textAlignment": {
+			"type": "string",
+			"default": "center"
+		}
+	},
+	"editorScript": "file:./edit.js",
+	"editorStyle": "file:./edit.css",
+	"style": "file:./style.css",
+	"render": "file:./render.php"
+}

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Contact Page</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#195de6",
+              "background-light": "#f6f6f8",
+              "background-dark": "#111621",
+            },
+            fontFamily: {
+              "display": ["Inter", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<!-- TopNavBar -->
+<header class="sticky top-0 z-50 flex h-16 w-full items-center justify-center border-b border-gray-200/80 dark:border-gray-800/80 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm">
+<nav class="flex w-full max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+<div class="flex items-center gap-4">
+<svg class="h-8 w-8 text-primary" fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M39.475 21.6262C40.358 21.4363 40.6863 21.5589 40.7581 21.5934C40.7876 21.655 40.8547 21.857 40.8082 22.3336C40.7408 23.0255 40.4502 24.0046 39.8572 25.2301C38.6799 27.6631 36.5085 30.6631 33.5858 33.5858C30.6631 36.5085 27.6632 38.6799 25.2301 39.8572C24.0046 40.4502 23.0255 40.7407 22.3336 40.8082C21.8571 40.8547 21.6551 40.7875 21.5934 40.7581C21.5589 40.6863 21.4363 40.358 21.6262 39.475C21.8562 38.4054 22.4689 36.9657 23.5038 35.2817C24.7575 33.2417 26.5497 30.9744 28.7621 28.762C30.9744 26.5497 33.2417 24.7574 35.2817 23.5037C36.9657 22.4689 38.4054 21.8562 39.475 21.6262ZM4.41189 29.2403L18.7597 43.5881C19.8813 44.7097 21.4027 44.9179 22.7217 44.7893C24.0585 44.659 25.5148 44.1631 26.9723 43.4579C29.9052 42.0387 33.2618 39.5667 36.4142 36.4142C39.5667 33.2618 42.0387 29.9052 43.4579 26.9723C44.1631 25.5148 44.659 24.0585 44.7893 22.7217C44.9179 21.4027 44.7097 19.8813 43.5881 18.7597L29.2403 4.41187C27.8527 3.02428 25.8765 3.02573 24.2861 3.36776C22.6081 3.72863 20.7334 4.58419 18.8396 5.74801C16.4978 7.18716 13.9881 9.18353 11.5858 11.5858C9.18354 13.988 7.18717 16.4978 5.74802 18.8396C4.58421 20.7334 3.72865 22.6081 3.36778 24.2861C3.02574 25.8765 3.02429 27.8527 4.41189 29.2403Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+<h2 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">AITS Consulting</h2>
+</div>
+<div class="hidden items-center gap-x-8 lg:flex">
+<a class="text-sm font-medium text-gray-600 hover:text-primary dark:text-gray-300 dark:hover:text-primary" href="#">Home</a>
+<a class="text-sm font-medium text-gray-600 hover:text-primary dark:text-gray-300 dark:hover:text-primary" href="#">Solutions</a>
+<a class="text-sm font-medium text-gray-600 hover:text-primary dark:text-gray-300 dark:hover:text-primary" href="#">About Us</a>
+<a class="text-sm font-medium text-gray-600 hover:text-primary dark:text-gray-300 dark:hover:text-primary" href="#">Resources</a>
+<a class="text-sm font-bold text-primary dark:text-primary" href="#">Contact</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="flex h-10 cursor-pointer items-center justify-center overflow-hidden rounded-lg bg-primary px-4 text-sm font-bold text-white transition-colors hover:bg-primary/90">
+<span class="truncate">Request a Demo</span>
+</button>
+<button class="lg:hidden p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800">
+<span class="material-symbols-outlined text-gray-800 dark:text-gray-200">menu</span>
+</button>
+</div>
+</nav>
+</header>
+<main class="flex flex-1 flex-col items-center py-12 sm:py-16 lg:py-20">
+<div class="w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+<!-- PageHeading -->
+<div class="mb-12 text-center">
+<h1 class="text-4xl font-black leading-tight tracking-tighter text-gray-900 dark:text-white sm:text-5xl lg:text-6xl">Contact Us</h1>
+<p class="mx-auto mt-4 max-w-2xl text-lg text-gray-600 dark:text-gray-400">
+                        We're here to help. Reach out to us for inquiries about our fleet safety solutions, partnerships, or support.
+                    </p>
+</div>
+<div class="grid grid-cols-1 gap-12 lg:grid-cols-5 lg:gap-8">
+<!-- Form Section -->
+<div class="lg:col-span-3">
+<div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-background-dark/50 p-6 sm:p-8">
+<!-- SectionHeader -->
+<h2 class="mb-6 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Send us a message</h2>
+<form action="#" class="space-y-6" method="POST">
+<!-- TextField for Name -->
+<div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
+<label class="flex flex-col">
+<p class="pb-2 text-sm font-medium text-gray-700 dark:text-gray-300">First Name</p>
+<input class="form-input h-12 w-full flex-1 resize-none overflow-hidden rounded-lg border border-gray-300 bg-background-light p-3 text-sm text-gray-900 placeholder:text-gray-500 focus:border-primary focus:outline-0 focus:ring-2 focus:ring-primary/50 dark:border-gray-700 dark:bg-background-dark dark:text-white dark:placeholder-gray-400" placeholder="Enter your first name" type="text" value=""/>
+</label>
+<label class="flex flex-col">
+<p class="pb-2 text-sm font-medium text-gray-700 dark:text-gray-300">Last Name</p>
+<input class="form-input h-12 w-full flex-1 resize-none overflow-hidden rounded-lg border border-gray-300 bg-background-light p-3 text-sm text-gray-900 placeholder:text-gray-500 focus:border-primary focus:outline-0 focus:ring-2 focus:ring-primary/50 dark:border-gray-700 dark:bg-background-dark dark:text-white dark:placeholder-gray-400" placeholder="Enter your last name" type="text" value=""/>
+</label>
+</div>
+<!-- TextField for Email -->
+<label class="flex flex-col">
+<p class="pb-2 text-sm font-medium text-gray-700 dark:text-gray-300">Email Address</p>
+<input class="form-input h-12 w-full flex-1 resize-none overflow-hidden rounded-lg border border-gray-300 bg-background-light p-3 text-sm text-gray-900 placeholder:text-gray-500 focus:border-primary focus:outline-0 focus:ring-2 focus:ring-primary/50 dark:border-gray-700 dark:bg-background-dark dark:text-white dark:placeholder-gray-400" placeholder="Enter your email address" type="email" value=""/>
+</label>
+<!-- TextArea for Message -->
+<label class="flex flex-col">
+<p class="pb-2 text-sm font-medium text-gray-700 dark:text-gray-300">Message</p>
+<textarea class="form-textarea w-full resize-y rounded-lg border border-gray-300 bg-background-light p-3 text-sm text-gray-900 placeholder:text-gray-500 focus:border-primary focus:outline-0 focus:ring-2 focus:ring-primary/50 dark:border-gray-700 dark:bg-background-dark dark:text-white dark:placeholder-gray-400" placeholder="How can we help?" rows="5"></textarea>
+</label>
+<button class="flex h-12 w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg bg-primary px-6 text-base font-bold text-white transition-colors hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 dark:ring-offset-background-dark" type="submit">
+<span class="truncate">Submit Message</span>
+</button>
+</form>
+</div>
+</div>
+<!-- Contact Info & Map Section -->
+<div class="lg:col-span-2">
+<div class="space-y-8">
+<!-- Contact Information Card -->
+<div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-background-dark/50 p-6 sm:p-8">
+<h3 class="mb-6 text-xl font-bold tracking-tight text-gray-900 dark:text-white">Other ways to connect</h3>
+<div class="space-y-4">
+<a class="group flex items-center gap-4" href="mailto:contact@aitsc.au">
+<div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
+<span class="material-symbols-outlined text-xl">mail</span>
+</div>
+<div>
+<p class="font-medium text-gray-800 dark:text-gray-200 group-hover:text-primary">contact@aitsc.au</p>
+<p class="text-sm text-gray-500 dark:text-gray-400">Email us for any inquiry</p>
+</div>
+</a>
+<a class="group flex items-center gap-4" href="tel:+61234567890">
+<div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
+<span class="material-symbols-outlined text-xl">call</span>
+</div>
+<div>
+<p class="font-medium text-gray-800 dark:text-gray-200 group-hover:text-primary">+61 2 3456 7890</p>
+<p class="text-sm text-gray-500 dark:text-gray-400">Mon-Fri from 9am to 5pm</p>
+</div>
+</a>
+<div class="flex items-center gap-4">
+<div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
+<span class="material-symbols-outlined text-xl">location_on</span>
+</div>
+<div>
+<p class="font-medium text-gray-800 dark:text-gray-200">123 Fleet St, Sydney, NSW 2000</p>
+<p class="text-sm text-gray-500 dark:text-gray-400">Visit our office</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Interactive Map -->
+<div class="aspect-video w-full overflow-hidden rounded-xl border border-gray-200 dark:border-gray-800">
+<img class="h-full w-full object-cover" data-alt="A birds-eye view of a city map with streets and buildings." data-location="Sydney" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAumIp5adSoWD72ZQzQLrIpLn7REEt1umoy1j1QrJyw_Hoeqe3jpAihhHZi2YlYvXsJwavevos4lv6DECSsNXuqvII-lnG5zBXj30OyZSzPjchIlPiYDPqG4ISWvupCpbprLzFO440Nxz2xuxP1mDAaDlmYCbO0GMJeRaxRcAENzXQ_V40WWz-ckbN_TD7Xpu2gkD1_VYdQWYJUs6DyS2WMmEjM0_LPlzoWkos9BWvE7fixcuT3VLIRW4klRgXbRFLjodr2KIsAx34"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full bg-white dark:bg-background-dark/50 border-t border-gray-200 dark:border-gray-800 mt-auto">
+<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8">
+<div class="flex flex-col items-center justify-between gap-4 md:flex-row">
+<p class="text-sm text-gray-500 dark:text-gray-400">© 2024 AITS Consulting. All rights reserved.</p>
+<div class="flex items-center space-x-6">
+<a class="text-sm text-gray-500 hover:text-primary dark:text-gray-400 dark:hover:text-primary" href="#">Privacy Policy</a>
+<a class="text-sm text-gray-500 hover:text-primary dark:text-gray-400 dark:hover:text-primary" href="#">Terms of Service</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+</body></html>

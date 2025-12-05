@@ -1,0 +1,23 @@
+/* Stats Block Editor Styles */
+.wp-block-stitch-stats {
+	border: 1px dashed #262626;
+	border-radius: 4px;
+	padding: 12px;
+	background-color: rgba(20, 20, 20, 0.5);
+}
+
+.wp-block-stitch-stats.is-selected {
+	border-color: #195de6;
+}
+
+.wp-block-stitch-stats__icon {
+	font-family: "Material Symbols Outlined";
+}
+
+.wp-block-stitch-stats__value {
+	font-family: Inter, sans-serif;
+}
+
+.wp-block-stitch-stats__label {
+	font-family: Inter, sans-serif;
+}

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Individual Blog Article Page</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#195de6",
+            "background-light": "#f6f6f8",
+            "background-dark": "#111621",
+          },
+          fontFamily: {
+            "display": ["Inter", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+  </style>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark text-[#111621] dark:text-gray-200">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<!-- TopNavBar -->
+<header class="sticky top-0 z-50 w-full bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm border-b border-gray-200 dark:border-gray-800">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between whitespace-nowrap h-16">
+<div class="flex items-center gap-4 text-[#0e121b] dark:text-white">
+<div class="size-6 text-primary">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M39.475 21.6262C40.358 21.4363 40.6863 21.5589 40.7581 21.5934C40.7876 21.655 40.8547 21.857 40.8082 22.3336C40.7408 23.0255 40.4502 24.0046 39.8572 25.2301C38.6799 27.6631 36.5085 30.6631 33.5858 33.5858C30.6631 36.5085 27.6632 38.6799 25.2301 39.8572C24.0046 40.4502 23.0255 40.7407 22.3336 40.8082C21.8571 40.8547 21.6551 40.7875 21.5934 40.7581C21.5589 40.6863 21.4363 40.358 21.6262 39.475C21.8562 38.4054 22.4689 36.9657 23.5038 35.2817C24.7575 33.2417 26.5497 30.9744 28.7621 28.762C30.9744 26.5497 33.2417 24.7574 35.2817 23.5037C36.9657 22.4689 38.4054 21.8562 39.475 21.6262ZM4.41189 29.2403L18.7597 43.5881C19.8813 44.7097 21.4027 44.9179 22.7217 44.7893C24.0585 44.659 25.5148 44.1631 26.9723 43.4579C29.9052 42.0387 33.2618 39.5667 36.4142 36.4142C39.5667 33.2618 42.0387 29.9052 43.4579 26.9723C44.1631 25.5148 44.659 24.0585 44.7893 22.7217C44.9179 21.4027 44.7097 19.8813 43.5881 18.7597L29.2403 4.41187C27.8527 3.02428 25.8765 3.02573 24.2861 3.36776C22.6081 3.72863 20.7334 4.58419 18.8396 5.74801C16.4978 7.18716 13.9881 9.18353 11.5858 11.5858C9.18354 13.988 7.18717 16.4978 5.74802 18.8396C4.58421 20.7334 3.72865 22.6081 3.36778 24.2861C3.02574 25.8765 3.02429 27.8527 4.41189 29.2403Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+<h2 class="text-[#0e121b] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">AITS Consulting</h2>
+</div>
+<div class="flex flex-1 justify-end items-center gap-8">
+<nav class="hidden md:flex items-center gap-9">
+<a class="text-[#0e121b] dark:text-gray-300 hover:text-primary dark:hover:text-primary text-sm font-medium leading-normal" href="#">Solutions</a>
+<a class="text-[#0e121b] dark:text-gray-300 hover:text-primary dark:hover:text-primary text-sm font-medium leading-normal" href="#">About Us</a>
+<a class="text-primary text-sm font-medium leading-normal" href="#">Blog</a>
+<a class="text-[#0e121b] dark:text-gray-300 hover:text-primary dark:hover:text-primary text-sm font-medium leading-normal" href="#">Contact</a>
+</nav>
+<button class="hidden md:flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors">
+<span class="truncate">Request a Demo</span>
+</button>
+</div>
+</div>
+</div>
+</header>
+<main class="layout-container flex h-full grow flex-col">
+<div class="max-w-4xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+<div class="layout-content-container flex flex-col flex-1">
+<!-- Breadcrumbs -->
+<div class="flex flex-wrap gap-2 mb-6">
+<a class="text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-primary text-sm font-medium leading-normal transition-colors" href="#">Home</a>
+<span class="text-gray-500 dark:text-gray-400 text-sm font-medium leading-normal">/</span>
+<a class="text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-primary text-sm font-medium leading-normal transition-colors" href="#">Blog</a>
+<span class="text-gray-500 dark:text-gray-400 text-sm font-medium leading-normal">/</span>
+<span class="text-[#0e121b] dark:text-white text-sm font-medium leading-normal">The Future of Fleet Safety...</span>
+</div>
+<!-- Article Header -->
+<div class="mb-8">
+<h1 class="text-[#0e121b] dark:text-white tracking-tight text-3xl md:text-4xl font-bold leading-tight mb-4">The Future of Fleet Safety Technology: Trends to Watch in 2024</h1>
+<p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal">By Jane Doe, Fleet Safety Specialist • Published on August 15, 2024 • 7 min read</p>
+</div>
+<!-- HeaderImage -->
+<div class="mb-8">
+<div class="w-full bg-center bg-no-repeat bg-cover flex flex-col justify-end overflow-hidden rounded-xl min-h-[300px] md:min-h-[400px]" data-alt="A futuristic truck dashboard with glowing holographic displays showing fleet data and maps" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB4_DTHKUX7AkUluy-mrgd4FUj93Zh2lrYTylHsIDlc9LbGvmol38cHOkNVmYz1mY8C4x_NxkS2XJGp4Y9eOjryGqUnbR4A1tMZBIlA-S7agqMJtrFgzQCg1DS85auoDj3RDf3QKn9duFOirfJs0D6cWu8-8GTQtZSxC67L1qC5BJSe9SHNdcWCV7yqpVoiPvt68CTQYq2PknIz6oc9lVtwltex-mR2Zdww5SVYYM9Ulm4B0L93-kSkCQKkEBAYosmU0nxbUJ804MI");'></div>
+</div>
+<!-- Main Content and Social Share -->
+<div class="flex flex-col md:flex-row gap-8 lg:gap-12">
+<!-- Social Share Bar (Sticky) -->
+<aside class="md:w-16 md:sticky md:top-24 h-fit">
+<div class="flex md:flex-col gap-4 items-center">
+<p class="hidden md:block text-xs font-bold uppercase text-gray-400 dark:text-gray-500 tracking-wider">SHARE</p>
+<div class="flex md:flex-col gap-4">
+<a aria-label="Share on LinkedIn" class="flex items-center justify-center size-10 rounded-full bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors" href="#">
+<svg class="size-5 text-gray-600 dark:text-gray-400" fill="currentColor" viewbox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"></path></svg>
+</a>
+<a aria-label="Share on Twitter" class="flex items-center justify-center size-10 rounded-full bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors" href="#">
+<svg class="size-5 text-gray-600 dark:text-gray-400" fill="currentColor" viewbox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.223.085c.645 1.956 2.52 3.374 4.738 3.414A9.87 9.87 0 010 17.538a13.94 13.94 0 007.548 2.212c9.142 0 14.307-7.443 14.307-14.03 0-.213-.005-.426-.015-.637.961-.689 1.79-1.56 2.459-2.544z"></path></svg>
+</a>
+<a aria-label="Share via Email" class="flex items-center justify-center size-10 rounded-full bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors" href="#">
+<span class="material-symbols-outlined text-gray-600 dark:text-gray-400 text-xl">mail</span>
+</a>
+</div>
+</div>
+</aside>
+<!-- Main Content Area -->
+<article class="flex-1 prose prose-lg dark:prose-invert max-w-none prose-p:text-gray-600 dark:prose-p:text-gray-300 prose-headings:text-[#0e121b] dark:prose-headings:text-white prose-a:text-primary hover:prose-a:underline prose-strong:text-[#0e121b] dark:prose-strong:text-white prose-blockquote:border-l-primary">
+<p>The fleet management industry is on the cusp of a technological revolution. As we move further into 2024, advancements in AI, IoT, and data analytics are reshaping how companies ensure the safety of their drivers, vehicles, and cargo. For fleet managers, staying ahead of these trends is not just about compliance; it's about fostering a culture of safety that boosts efficiency, reduces costs, and protects human lives.</p>
+<h2>1. AI-Powered Dash Cams and Driver Monitoring</h2>
+<p>Gone are the days of simple forward-facing cameras. The new generation of dash cams is equipped with artificial intelligence that can analyze driver behavior in real-time. These systems can detect signs of distraction, such as cell phone use or drowsiness, and provide immediate audio alerts. By proactively identifying risky behaviors, fleet managers can intervene with targeted coaching before an incident occurs.</p>
+<blockquote>
+<p>"AI is no longer a futuristic concept in fleet safety; it's a practical tool that provides actionable insights to prevent accidents before they happen."</p>
+</blockquote>
+<p>Data from these systems can be aggregated to identify trends across the entire fleet, highlighting the need for specific training programs or policy changes. The result is a more proactive and data-driven approach to safety management.</p>
+<!-- CTA Block -->
+<div class="not-prose my-12 p-8 rounded-xl bg-primary/10 dark:bg-primary/20 border border-primary/20 dark:border-primary/30">
+<h3 class="text-2xl font-bold text-[#0e121b] dark:text-white mb-3">Elevate Your Fleet's Safety with Fleet Safe Pro</h3>
+<p class="text-gray-600 dark:text-gray-300 mb-6">Discover how AITS Consulting's flagship solution, Fleet Safe Pro, leverages cutting-edge AI and telematics to provide a comprehensive safety overview. Reduce incidents, lower insurance premiums, and protect your most valuable assets.</p>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-primary text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors">
+<span class="truncate">Learn More About Fleet Safe Pro</span>
+</button>
+</div>
+<h2>2. Predictive Analytics for Risk Assessment</h2>
+<p>Predictive analytics takes historical data—such as past incidents, driving behavior, vehicle maintenance records, and even weather patterns—to forecast the likelihood of future accidents. By identifying high-risk drivers, routes, or times of day, companies can take preventative measures. This might include re-routing vehicles away from hazardous areas or scheduling additional rest breaks for drivers on long hauls.</p>
+<figure>
+<img alt="A dashboard showing various data charts and graphs related to fleet performance and safety metrics." class="rounded-lg" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSX-xG2kstUZP_hUizIycec1HKOkHd5gZMLxYaTkQExVVDCHQu5T9df7B72Nfxwx8mOnOD6qCEdFwHML_KxnqHXqw5Kt0XwfgIrlKYETnita75HohYr6LopOIGDSmO3QVllpQ1EREKI3F9MfSRGT9vA5WwVSQLOmwo7RrybGmrGpLfCzKVZCS21tdYmrhSfdpVYo7fM9eNtoSPlYAkH9-vy3SVlh7RVQyItzfl4O7AP9kT4OK9xQuWYaepbmjAVo_DQWHvBaWZfZ0"/>
+<figcaption class="text-center text-sm text-gray-500 dark:text-gray-400 mt-2">Data visualization is key to understanding and acting on predictive safety insights.</figcaption>
+</figure>
+<h2>3. The Rise of Connected Vehicle Technology</h2>
+<p>Vehicle-to-Everything (V2X) communication technology allows vehicles to "talk" to each other and to infrastructure like traffic lights. This creates a connected ecosystem where drivers are alerted to potential hazards, such as a vehicle running a red light or an impending collision at an intersection. As 5G networks become more widespread, the speed and reliability of V2X will make it a cornerstone of fleet safety.</p>
+</article>
+</div>
+<!-- Related Articles Section -->
+<div class="mt-16 pt-12 border-t border-gray-200 dark:border-gray-800">
+<h2 class="text-2xl font-bold text-[#0e121b] dark:text-white mb-8">Related Articles</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="flex flex-col group">
+<a class="block overflow-hidden rounded-xl mb-4" href="#">
+<img class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" data-alt="A driver's hands on a steering wheel, with a modern dashboard visible in the background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBblwKVftQgaRcemsBySIEsHKpjTr8IdoYlHWo5dilEbqBs0Xtmh2HuRS_7zL7N9fooWr2MkKKubFEfP_yD68vL6RKNagVOsFoDE5ayos5j-MRMlPdEpX5Hrw2EymTFU_lWDUgEIKffEkIe0ReoJYaionxA7o9-H_NLUndAjvn5BBRY8gQmtpiPZsJiUanUS00Ydbz5QnB5gX65wf0VkdaRWrEGdE959uwL7duLzJ79oBR6lergwOjAmvIoCzKeJmwsOOkv0zWNZY0"/>
+</a>
+<h3 class="text-lg font-bold text-[#0e121b] dark:text-white mb-2 leading-snug"><a class="hover:text-primary dark:hover:text-primary transition-colors" href="#">5 Ways to Reduce Fleet Accidents Through Driver Training</a></h3>
+<p class="text-sm text-gray-500 dark:text-gray-400">Mar 21, 2024 • 5 min read</p>
+</div>
+<div class="flex flex-col group">
+<a class="block overflow-hidden rounded-xl mb-4" href="#">
+<img class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" data-alt="A bar chart showing increasing positive trends, representing return on investment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFdd1HGu5dWiJXJyAdmwTdIDuuAQw51OsKiQC5nk2Lz1N-0x-vzR6ie562W031tmo3Iif3xDi6AHm6z6PtRXjDyzvTQo1C6thdaRSdPMJIJA_eZ9nqojOr9s-3yGSNE3UpYTiEp5A_5D4xqt80wft0c-RLV0XYMhWRFDjJTuVGIfQ1-4tHGWmqfbkc_JLKq-FV94yNGshN0DVanQNNYLEbDAznA2cUTB5a-8hwP3x1jE7Tj4tUHm0CtqsdY710-2G75_gjcHJosJE"/>
+</a>
+<h3 class="text-lg font-bold text-[#0e121b] dark:text-white mb-2 leading-snug"><a class="hover:text-primary dark:hover:text-primary transition-colors" href="#">The ROI of Modern Telematics in Fleet Management</a></h3>
+<p class="text-sm text-gray-500 dark:text-gray-400">Jun 05, 2024 • 6 min read</p>
+</div>
+<div class="flex flex-col group">
+<a class="block overflow-hidden rounded-xl mb-4" href="#">
+<img class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" data-alt="A close-up of a semi-truck's wheel on an open highway, symbolizing logistics." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYK8Q4blD-QEfXvHY_efiMtOkDWqCvB41t5mrNC8IV3ewtXWjF35hmtEomE0rDra6SkzdgfTywFbUi9tVYYKoh2IJxGnBLrVcOS6NJVGP8-r6ZlD036iWe7UtkA0dMVhySUcHrbH8shXu4BFE1f9wktbbJeT2q0aCE6OwdMwMa0kbQh3R7rYRLd_4HT4LJ2_j0ccXJ5H8Bpfo9Nro9X0NuMB0uaopz4U2wAYkcdYeG86BwznZJR0vQabCKgQUVuiCMdR0zemCv8Wc"/>
+</a>
+<h3 class="text-lg font-bold text-[#0e121b] dark:text-white mb-2 leading-snug"><a class="hover:text-primary dark:hover:text-primary transition-colors" href="#">Navigating Compliance: A Guide to 2024 Regulations</a></h3>
+<p class="text-sm text-gray-500 dark:text-gray-400">Jul 30, 2024 • 8 min read</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Global Footer -->
+<footer class="bg-gray-100 dark:bg-gray-900/50 mt-16">
+<div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+<div class="col-span-2 md:col-span-1">
+<div class="flex items-center gap-2 text-[#0e121b] dark:text-white">
+<div class="size-6 text-primary">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M39.475 21.6262C40.358 21.4363 40.6863 21.5589 40.7581 21.5934C40.7876 21.655 40.8547 21.857 40.8082 22.3336C40.7408 23.0255 40.4502 24.0046 39.8572 25.2301C38.6799 27.6631 36.5085 30.6631 33.5858 33.5858C30.6631 36.5085 27.6632 38.6799 25.2301 39.8572C24.0046 40.4502 23.0255 40.7407 22.3336 40.8082C21.8571 40.8547 21.6551 40.7875 21.5934 40.7581C21.5589 40.6863 21.4363 40.358 21.6262 39.475C21.8562 38.4054 22.4689 36.9657 23.5038 35.2817C24.7575 33.2417 26.5497 30.9744 28.7621 28.762C30.9744 26.5497 33.2417 24.7574 35.2817 23.5037C36.9657 22.4689 38.4054 21.8562 39.475 21.6262ZM4.41189 29.2403L18.7597 43.5881C19.8813 44.7097 21.4027 44.9179 22.7217 44.7893C24.0585 44.659 25.5148 44.1631 26.9723 43.4579C29.9052 42.0387 33.2618 39.5667 36.4142 36.4142C39.5667 33.2618 42.0387 29.9052 43.4579 26.9723C44.1631 25.5148 44.659 24.0585 44.7893 22.7217C44.9179 21.4027 44.7097 19.8813 43.5881 18.7597L29.2403 4.41187C27.8527 3.02428 25.8765 3.02573 24.2861 3.36776C22.6081 3.72863 20.7334 4.58419 18.8396 5.74801C16.4978 7.18716 13.9881 9.18353 11.5858 11.5858C9.18354 13.988 7.18717 16.4978 5.74802 18.8396C4.58421 20.7334 3.72865 22.6081 3.36778 24.2861C3.02574 25.8765 3.02429 27.8527 4.41189 29.2403Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+<h2 class="text-lg font-bold">AITS Consulting</h2>
+</div>
+<p class="mt-4 text-sm text-gray-500 dark:text-gray-400">Pioneering safety and efficiency for modern fleets.</p>
+</div>
+<div>
+<h3 class="text-sm font-semibold text-gray-900 dark:text-white tracking-wider uppercase">Solutions</h3>
+<ul class="mt-4 space-y-2">
+<li><a class="text-base text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors" href="#">Fleet Safe Pro</a></li>
+<li><a class="text-base text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors" href="#">Compliance Management</a></li>
+<li><a class="text-base text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors" href="#">Driver Coaching</a></li>
+</ul>
+</div>
+<div>
+<h3 class="text-sm font-semibold text-gray-900 dark:text-white tracking-wider uppercase">Company</h3>
+<ul class="mt-4 space-y-2">
+<li><a class="text-base text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors" href="#">About Us</a></li>
+<li><a class="text-base text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors" href="#">Careers</a></li>
+<li><a class="text-base text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors" href="#">Contact</a></li>
+</ul>
+</div>
+<div>
+<h3 class="text-sm font-semibold text-gray-900 dark:text-white tracking-wider uppercase">Legal</h3>
+<ul class="mt-4 space-y-2">
+<li><a class="text-base text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="text-base text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors" href="#">Terms of Service</a></li>
+</ul>
+</div>
+</div>
+<div class="mt-8 border-t border-gray-200 dark:border-gray-800 pt-8 text-center">
+<p class="text-sm text-gray-500 dark:text-gray-400">© 2024 AITS Consulting. All rights reserved.</p>
+</div>
+</div>
+</footer>
+</div>
+</body></html>

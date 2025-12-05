@@ -1,0 +1,65 @@
+<!-- wp:template {"slug":"archive-post","title":"Blog Archive"} -->
+<!-- wp:template-part {"slug":"header"} /-->
+
+<!-- wp:group {"align":"full","layout":{"type":"default"}} -->
+<div class="wp-block-group alignfull">
+	<!-- Blog Archive Header -->
+	<!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"3rem","bottom":"2rem"}}},"layout":{"type":"constrained","contentSize":"1200px"}} -->
+	<div class="wp-block-group alignfull" style="padding-top:3rem;padding-bottom:2rem">
+		<!-- wp:heading {"level":1,"style":{"typography":{"fontSize":"2.25rem","fontWeight":"700"}}} -->
+		<h1 class="wp-block-heading" style="font-size:2.25rem;font-weight:700">Blog Posts</h1>
+		<!-- /wp:heading -->
+
+		<!-- wp:paragraph {"style":{"color":{"text":"a3a3a3"}}} -->
+		<p class="has-text-color" style="color:#a3a3a3">Discover insights and updates from our fleet safety experts.</p>
+		<!-- /wp:paragraph -->
+	</div>
+	<!-- /wp:group -->
+
+	<!-- Blog Posts Grid -->
+	<!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"0","bottom":"5rem"}}},"layout":{"type":"constrained","contentSize":"1200px"}} -->
+	<div class="wp-block-group alignfull" style="padding-top:0;padding-bottom:5rem">
+		<!-- wp:query {"queryId":0,"query":{"perPage":12,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"exclude","inherit":false},"displayLayout":{"type":"flex","columns":3},"namespace":"core/query"} -->
+		<div class="wp-block-query">
+			<!-- wp:post-template -->
+			<!-- wp:group {"style":{"border":{"width":"1px","color":"262626"},"spacing":{"padding":"1.5rem"}},"layout":{"type":"constrained"}} -->
+			<div class="wp-block-group" style="border-width:1px;border-color:#262626;padding:1.5rem">
+				<!-- Featured Image -->
+				<!-- wp:post-featured-image {"isLink":true,"width":"100%","height":"200px"} /-->
+
+				<!-- Post Category -->
+				<!-- wp:post-terms {"term":"category","style":{"typography":{"fontSize":"0.75rem","fontWeight":"600"},"spacing":{"margin":{"top":"1rem","bottom":"0.5rem"}}}} /-->
+
+				<!-- Post Title -->
+				<!-- wp:post-title {"isLink":true,"style":{"typography":{"fontSize":"1.1rem","fontWeight":"600"},"spacing":{"margin":{"top":"0.5rem","bottom":"0.75rem"}}}} /-->
+
+				<!-- Post Meta -->
+				<!-- wp:group {"style":{"spacing":{"blockGap":"1rem"},"typography":{"fontSize":"0.8rem"}},"layout":{"type":"flex"}} -->
+				<div class="wp-block-group" style="gap:1rem;font-size:0.8rem">
+					<!-- wp:post-date {"style":{"color":{"text":"a3a3a3"}}} /-->
+
+					<!-- wp:post-author-name {"style":{"color":{"text":"a3a3a3"}}} /-->
+				</div>
+				<!-- /wp:group -->
+
+				<!-- Post Excerpt -->
+				<!-- wp:post-excerpt {"moreText":"Read Article","style":{"spacing":{"margin":{"top":"1rem","bottom":"1rem"}},"typography":{"fontSize":"0.9rem"}}} /-->
+			</div>
+			<!-- /wp:group -->
+			<!-- /wp:post-template -->
+
+			<!-- Pagination -->
+			<!-- wp:query-pagination {"layout":{"type":"flex","justifyContent":"center","flexWrap":"wrap"},"style":{"spacing":{"blockGap":"0.5rem"}}} -->
+			<!-- wp:query-pagination-previous {"label":"Previous"} /-->
+			<!-- wp:query-pagination-numbers /-->
+			<!-- wp:query-pagination-next {"label":"Next"} /-->
+			<!-- /wp:query-pagination -->
+		</div>
+		<!-- /wp:query -->
+	</div>
+	<!-- /wp:group -->
+</div>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"footer"} /-->
+<!-- /wp:template -->

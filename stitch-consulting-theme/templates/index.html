@@ -1,0 +1,54 @@
+<!-- wp:template {"slug":"index","title":"Blog Archive"} -->
+<!-- wp:template-part {"slug":"header"} /-->
+
+<!-- wp:group {"align":"full","layout":{"type":"default"}} -->
+<div class="wp-block-group alignfull">
+	<!-- Blog Header Section -->
+	<!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"3rem","bottom":"3rem"}}},"layout":{"type":"constrained","contentSize":"1200px"}} -->
+	<div class="wp-block-group alignfull" style="padding-top:3rem;padding-bottom:3rem">
+		<!-- wp:heading {"level":1,"style":{"typography":{"fontSize":"2.5rem","fontWeight":"700"}}} -->
+		<h1 class="wp-block-heading" style="font-size:2.5rem;font-weight:700">Insights &amp; News</h1>
+		<!-- /wp:heading -->
+
+		<!-- wp:paragraph {"style":{"color":{"text":"a3a3a3"},"typography":{"fontSize":"1.125rem"}}} -->
+		<p class="has-text-color" style="color:#a3a3a3;font-size:1.125rem">Expert analysis and updates for the fleet industry.</p>
+		<!-- /wp:paragraph -->
+	</div>
+	<!-- /wp:group -->
+
+	<!-- Category Filter Tabs -->
+	<!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"0","bottom":"2rem"}}},"layout":{"type":"constrained","contentSize":"1200px"}} -->
+	<div class="wp-block-group alignfull" style="padding-top:0;padding-bottom:2rem">
+		<!-- wp:group {"style":{"spacing":{"blockGap":"1rem"}},"layout":{"type":"flex","flexWrap":"wrap"}} -->
+		<div class="wp-block-group" style="gap:1rem">
+			<!-- wp:paragraph {"style":{"typography":{"fontSize":"0.875rem","fontWeight":"600"}}} -->
+			<p style="font-size:0.875rem;font-weight:600">Filter by category:</p>
+			<!-- /wp:paragraph -->
+
+			<!-- Categories - dynamically populated by WordPress -->
+			<!-- wp:navigation {"ref":0,"theme":{},"overlayMenu":"never","style":{"typography":{"fontSize":"0.875rem"}},"layout":{"type":"flex","orientation":"horizontal","justifyContent":"left","flexWrap":"wrap"}} -->
+			<!-- wp:navigation-link {"label":"All Posts","url":"/blog"} /-->
+			<!-- wp:navigation-link {"label":"Safety Technology","url":"/blog/category/safety-technology"} /-->
+			<!-- wp:navigation-link {"label":"Driver Training","url":"/blog/category/driver-training"} /-->
+			<!-- wp:navigation-link {"label":"Regulatory Updates","url":"/blog/category/regulatory-updates"} /-->
+			<!-- wp:navigation-link {"label":"Best Practices","url":"/blog/category/best-practices"} /-->
+			<!-- /wp:navigation -->
+		</div>
+		<!-- /wp:group -->
+	</div>
+	<!-- /wp:group -->
+
+	<!-- Blog Posts Grid -->
+	<!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"0","bottom":"5rem"}}},"layout":{"type":"constrained","contentSize":"1200px"}} -->
+	<div class="wp-block-group alignfull" style="padding-top:0;padding-bottom:5rem">
+		<!-- wp:stitch/card-grid {"postsPerPage":9,"layout":"grid","showPagination":true} /-->
+	</div>
+	<!-- /wp:group -->
+
+	<!-- Pagination -->
+	<!-- wp:template-part {"slug":"pagination"} /-->
+</div>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"footer"} /-->
+<!-- /wp:template -->

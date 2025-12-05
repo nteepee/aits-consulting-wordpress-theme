@@ -1,0 +1,71 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "stitch/hero",
+	"title": "Hero",
+	"category": "design",
+	"description": "Full-width hero section with background image, overlay, and call-to-action buttons",
+	"icon": "cover-image",
+	"keywords": ["hero", "banner", "cta"],
+	"version": "1.0.0",
+	"supports": {
+		"html": false,
+		"align": ["full"],
+		"color": {
+			"background": true,
+			"text": true
+		},
+		"spacing": {
+			"padding": true
+		}
+	},
+	"textdomain": "stitch",
+	"attributes": {
+		"heading": {
+			"type": "string",
+			"default": "Transform Your Business"
+		},
+		"subheading": {
+			"type": "string",
+			"default": "Innovative solutions for modern challenges"
+		},
+		"backgroundImageId": {
+			"type": "number",
+			"default": 0
+		},
+		"backgroundImageUrl": {
+			"type": "string",
+			"default": ""
+		},
+		"overlayOpacity": {
+			"type": "number",
+			"default": 0.5,
+			"minimum": 0,
+			"maximum": 1
+		},
+		"primaryButtonText": {
+			"type": "string",
+			"default": "Get Started"
+		},
+		"primaryButtonUrl": {
+			"type": "string",
+			"default": ""
+		},
+		"secondaryButtonText": {
+			"type": "string",
+			"default": "Learn More"
+		},
+		"secondaryButtonUrl": {
+			"type": "string",
+			"default": ""
+		},
+		"minHeight": {
+			"type": "string",
+			"default": "600px"
+		}
+	},
+	"editorScript": "file:./edit.js",
+	"editorStyle": "file:./edit.css",
+	"style": "file:./style.css",
+	"render": "file:./render.php"
+}

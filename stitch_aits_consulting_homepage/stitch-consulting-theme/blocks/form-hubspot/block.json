@@ -1,0 +1,44 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "stitch/form-hubspot",
+	"title": "HubSpot Form",
+	"description": "Embed a HubSpot form with custom styling and configuration",
+	"category": "stitch",
+	"icon": "format-aside",
+	"supports": {
+		"html": false,
+		"align": [ "wide", "full" ]
+	},
+	"attributes": {
+		"portalId": {
+			"type": "string",
+			"default": ""
+		},
+		"formId": {
+			"type": "string",
+			"default": ""
+		},
+		"title": {
+			"type": "string",
+			"default": ""
+		},
+		"description": {
+			"type": "string",
+			"default": ""
+		},
+		"showTitle": {
+			"type": "boolean",
+			"default": false
+		},
+		"align": {
+			"type": "string",
+			"default": "none"
+		}
+	},
+	"textdomain": "stitch-consulting",
+	"editorScript": "file:./edit.js",
+	"editorStyle": "file:./edit.css",
+	"style": "file:./style.css",
+	"render": "file:./render.php"
+}

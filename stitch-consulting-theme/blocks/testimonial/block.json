@@ -1,0 +1,54 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "stitch/testimonial",
+	"title": "Testimonial",
+	"category": "design",
+	"description": "Customer testimonial with quote, author, and rating",
+	"icon": "testimonial",
+	"keywords": ["testimonial", "quote", "review"],
+	"version": "1.0.0",
+	"supports": {
+		"html": false,
+		"color": {
+			"background": true,
+			"text": true
+		},
+		"spacing": {
+			"padding": true
+		}
+	},
+	"textdomain": "stitch",
+	"attributes": {
+		"quote": {
+			"type": "string",
+			"default": "This service has transformed how we do business."
+		},
+		"author": {
+			"type": "string",
+			"default": "John Doe"
+		},
+		"role": {
+			"type": "string",
+			"default": "CEO, Company Name"
+		},
+		"authorImageId": {
+			"type": "number",
+			"default": 0
+		},
+		"authorImageUrl": {
+			"type": "string",
+			"default": ""
+		},
+		"rating": {
+			"type": "number",
+			"default": 5,
+			"minimum": 0,
+			"maximum": 5
+		}
+	},
+	"editorScript": "file:./edit.js",
+	"editorStyle": "file:./edit.css",
+	"style": "file:./style.css",
+	"render": "file:./render.php"
+}

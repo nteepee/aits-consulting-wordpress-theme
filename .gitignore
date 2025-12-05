@@ -1,0 +1,42 @@
+# WordPress
+wp-config-local.php
+wp-config.php
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# IDE
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Dependencies
+node_modules/
+vendor/
+
+# Build outputs
+dist/
+build/
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Cache
+.cache/
+*.cache
+
+# Theme-specific
+stitch-consulting-theme/node_modules/
+stitch-consulting-theme/dist/
+stitch-consulting-theme/build/
+
+# Plans (local development only)
+plans/*/reports/

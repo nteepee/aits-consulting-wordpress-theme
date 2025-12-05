@@ -1,0 +1,40 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "stitch/card-grid",
+	"title": "Card Grid",
+	"category": "design",
+	"description": "Responsive grid container for cards",
+	"icon": "grid",
+	"keywords": ["grid", "cards", "layout"],
+	"version": "1.0.0",
+	"supports": {
+		"html": false,
+		"align": ["full"],
+		"color": {
+			"background": true
+		},
+		"spacing": {
+			"padding": true
+		}
+	},
+	"textdomain": "stitch",
+	"attributes": {
+		"columns": {
+			"type": "number",
+			"default": 3
+		},
+		"gap": {
+			"type": "string",
+			"default": "24px"
+		},
+		"backgroundColor": {
+			"type": "string",
+			"default": "transparent"
+		}
+	},
+	"editorScript": "file:./edit.js",
+	"editorStyle": "file:./edit.css",
+	"style": "file:./style.css",
+	"render": "file:./render.php"
+}

@@ -1,0 +1,81 @@
+/* Stitch Consulting Theme - CSS Custom Properties */
+
+:root {
+	/* Colors */
+	--color-primary: #195de6;
+	--color-primary-dark: #0a4dd4;
+	--color-secondary: #003366;
+	--color-bg-dark: #0A0A0A;
+	--color-bg-light: #f6f6f8;
+	--color-surface-dark: #141414;
+	--color-surface-dark-alt: #243047;
+	--color-border-dark: #262626;
+	--color-border-light: #DEE2E6;
+	--color-text-white: #FFFFFF;
+	--color-text-muted: #A3A3A3;
+	--color-red: #EF4444;
+	--color-green: #10B981;
+
+	/* Spacing scale (8px base) */
+	--spacing-2xs: 0.25rem;
+	--spacing-xs: 0.5rem;
+	--spacing-sm: 0.75rem;
+	--spacing-base: 1rem;
+	--spacing-md: 1.5rem;
+	--spacing-lg: 2rem;
+	--spacing-xl: 2.5rem;
+	--spacing-2xl: 3rem;
+	--spacing-3xl: 4rem;
+	--spacing-4xl: 6rem;
+
+	/* Typography */
+	--font-family-primary: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+	--font-family-mono: "Courier New", monospace;
+	--font-size-xs: 0.75rem;
+	--font-size-sm: 0.875rem;
+	--font-size-base: 1rem;
+	--font-size-lg: 1.125rem;
+	--font-size-xl: 1.25rem;
+	--font-size-2xl: 1.5rem;
+	--font-size-3xl: 1.875rem;
+	--font-size-4xl: 2.25rem;
+	--font-size-5xl: 3rem;
+	--font-size-6xl: 3.75rem;
+
+	--line-height-tight: 1.2;
+	--line-height-normal: 1.5;
+	--line-height-relaxed: 1.75;
+
+	/* Shadows */
+	--shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+	--shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+	--shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+	--shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+
+	/* Border radius */
+	--radius-sm: 0.25rem;
+	--radius-md: 0.5rem;
+	--radius-lg: 1rem;
+	--radius-xl: 1.5rem;
+
+	/* Transitions */
+	--transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+	--transition-base: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	--transition-slow: 350ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media (prefers-color-scheme: light) {
+	:root {
+		--bg-primary: var(--color-bg-light);
+		--text-primary: #333;
+		--border-primary: var(--color-border-light);
+	}
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--bg-primary: var(--color-bg-dark);
+		--text-primary: var(--color-text-white);
+		--border-primary: var(--color-border-dark);
+	}
+}

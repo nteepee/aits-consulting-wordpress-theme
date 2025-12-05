@@ -1,0 +1,11 @@
+/* Card Grid Block Editor Styles */
+.wp-block-stitch-card-grid {
+	border: 1px dashed #262626;
+	border-radius: 4px;
+	padding: 12px;
+	background-color: rgba(20, 20, 20, 0.5);
+}
+
+.wp-block-stitch-card-grid.is-selected {
+	border-color: #195de6;
+}

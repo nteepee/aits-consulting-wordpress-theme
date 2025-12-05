@@ -1,0 +1,29 @@
+/* CTA Block Editor Styles */
+.wp-block-stitch-cta {
+	border-radius: 4px;
+	overflow: hidden;
+}
+
+.wp-block-stitch-cta.is-selected {
+	box-shadow: 0 0 0 3px rgba(25, 93, 230, 0.2);
+}
+
+.wp-block-stitch-cta__content {
+	font-family: Inter, sans-serif;
+}
+
+.wp-block-stitch-cta__heading {
+	font-size: 2.25rem;
+	font-weight: 700;
+	line-height: 1.2;
+	margin-bottom: 20px;
+	margin-top: 0;
+}
+
+.wp-block-stitch-cta__description {
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 1.6;
+	margin-bottom: 30px;
+	margin-top: 0;
+}
