@@ -1,0 +1,78 @@
+services:
+  # MySQL Database
+  mysql:
+    image: mysql:8.0
+    container_name: aits-wordpress-db
+    ports:
+      - "3307:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: wordpress_root_pass_123
+      MYSQL_DATABASE: wordpress_db
+      MYSQL_USER: wordpress_user
+      MYSQL_PASSWORD: wordpress_pass_123
+    volumes:
+      - mysql_data:/var/lib/mysql
+    networks:
+      - wordpress_network
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      timeout: 20s
+      retries: 10
+    restart: unless-stopped
+
+  # WordPress
+  wordpress:
+    image: wordpress:6.4-php8.2-apache
+    container_name: aits-wordpress
+    ports:
+      - "8081:80"
+    depends_on:
+      mysql:
+        condition: service_healthy
+    environment:
+      WORDPRESS_DB_HOST: mysql:3306
+      WORDPRESS_DB_NAME: wordpress_db
+      WORDPRESS_DB_USER: wordpress_user
+      WORDPRESS_DB_PASSWORD: wordpress_pass_123
+      WORDPRESS_TABLE_PREFIX: wp_
+      WORDPRESS_DEBUG: "true"
+      WORDPRESS_DEBUG_LOG: /var/www/html/wp-content/debug.log
+      WORDPRESS_DEBUG_DISPLAY: "false"
+    volumes:
+      - wordpress_data:/var/www/html
+      - ./stitch-consulting-theme:/var/www/html/wp-content/themes/stitch-consulting-theme
+    networks:
+      - wordpress_network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+  # PHPMyAdmin (optional, for database management)
+  phpmyadmin:
+    image: phpmyadmin:latest
+    container_name: aits-phpmyadmin
+    ports:
+      - "8082:80"
+    depends_on:
+      - mysql
+    environment:
+      PMA_HOST: mysql
+      PMA_USER: wordpress_user
+      PMA_PASSWORD: wordpress_pass_123
+    networks:
+      - wordpress_network
+    restart: unless-stopped
+
+volumes:
+  mysql_data:
+    driver: local
+  wordpress_data:
+    driver: local
+
+networks:
+  wordpress_network:
+    driver: bridge
